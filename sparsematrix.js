@@ -123,32 +123,62 @@ class SparseMatrix {
     }
 }
 
+let heap = process.memoryUsage().heapUsed;
 
+console.time("Création classe")
 let sparse = new SparseMatrix(10000, 10000, COLUMNS);
-let non_sparse = Array.from({ length: 10000 }).map(e => Array(10000).fill(0));
+console.timeEnd("Création classe")
 
-for (let i = 0 ; i < 10 ; i++) {
-    for (let j = 0 ; j < 10 ; j++) {
-        sparse.setCoefficient(i * 1000, j * 1000, 1);
-        non_sparse[i * 1000][j * 1000] = 1;
+let sparse_size = process.memoryUsage().heapUsed - heap;
+
+console.time("Création naïve")
+let non_sparse = Array.from({ length: 10000 }).map(e => Array(10000).fill(0));
+console.timeEnd("Création naïve")
+
+let non_sparse_size = process.memoryUsage().heapUsed - heap - sparse_size;
+
+console.log()
+
+console.log(`Taille en mémoire classe : ${Math.floor(sparse_size/1024)}Kio`)
+console.log(`Taille en mémoire naïve : ${Math.floor(non_sparse_size/1024)}Kio`)
+
+console.log()
+
+console.time("Initialisation classe")
+for (let i = 0 ; i < 100 ; i++) {
+    for (let j = 0 ; j < 100 ; j++) {
+        sparse.setCoefficient(i * 100, j * 100, 1);
     }
 }
+console.timeEnd("Initialisation classe")
 
-console.time("Implémentation naïve")
-let non_count = 0;
-for (let line of non_sparse) {
-    non_count += line.filter(e => e != 0).length;
+
+console.time("Initialisation naïve")
+for (let i = 0 ; i < 100 ; i++) {
+    for (let j = 0 ; j < 100 ; j++) {
+        non_sparse[i * 100][j * 100] = 1;
+    }
 }
-console.timeEnd("Implémentation naïve")
+console.timeEnd("Initialisation naïve")
 
 
-console.time("Implémentation liste de map")
+console.log()
+
+console.time("Décompte valeurs classe")
 let spa_count = 0;
 for (let index of sparse.columnsIndex) {
     let columns = sparse.getColumn(index);
     spa_count += Object.keys(columns).length;
 }
-console.timeEnd("Implémentation liste de map")
+console.timeEnd("Décompte valeurs classe")
 
-console.log(non_count);
-console.log(spa_count);
+console.time("Décompte valeurs naïve")
+let non_count = 0;
+for (let line of non_sparse) {
+    non_count += line.filter(e => e != 0).length;
+}
+console.timeEnd("Décompte valeurs naïve")
+
+console.log("\nNombre de valeurs non nulles :")
+console.log(non_count, "/", 10000**2, "=>", non_count / 1000**2, "%");
+console.log(spa_count, "/", 10000**2, "=>", non_count / 1000**2, "%");
