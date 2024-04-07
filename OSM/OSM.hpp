@@ -22,7 +22,20 @@ namespace OSM {
     /** \brief The default type for signed integers. */
     typedef int ZCoefficient;
 
-    template <typename _CoefficientType = ZCoefficient, int _ChainTypeFlag = COLUMN>
+    /**
+     * \class Chain
+     * \brief Allow to create row/column sparse vectors.
+     * 
+     * The Chain class contains all algebraic functions that are related to vectors.
+     * 
+     * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
+     * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 07/04/2024
+     */
+    template <typename _CoefficientType, int _ChainTypeFlag>
     class Chain;
 
     template <typename _ChainType>
