@@ -191,7 +191,7 @@ public:
      * \date 07/04/2024
      */
     template <typename _CT, int _CTF>
-    friend Chain operator*(const Chain<_CT, _CTF> &_chain, const int _lambda);
+    friend Chain operator*(const Chain<_CT, _CTF> &_chain, const _CT _lambda);
 
     /**
      * \brief Perform matrix multiplication between two chains.
