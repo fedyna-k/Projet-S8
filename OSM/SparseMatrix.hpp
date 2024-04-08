@@ -45,7 +45,7 @@ public:
     /**
      * \brief Create new SparseMatrix object.
      * 
-     * Default constructor, initialize an empty Chain as a Z integers column chain.
+     * Default constructor, initialize an empty Matrix as Z integers column chains.
      * 
      * \tparam _ChainType The matrix chains types (default is default OSM::Chain)
      * 
@@ -56,6 +56,22 @@ public:
      * \date 08/04/2024
      */
     SparseMatrix();
+
+    /**
+     * \brief Create new SparseMatrix object.
+     * 
+     * Constructor with size, initialize an empty Matrix as Z integers column chains.
+     * 
+     * \tparam _ChainType The matrix chains types (default is default OSM::Chain)
+     * \param[in] _chainCount The number of chains to preallocate.
+     * 
+     * \see \link OSM::Chain \endlink
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 08/04/2024
+     */
+    SparseMatrix(const int _chainCount);
 
     /**
      * \brief Create new Chain for SparseMatrix object.
@@ -424,7 +440,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    Chain& SparseMatrix/=(const int *_indexes);
+    SparseMatrix& operator/=(const int *_indexes);
 
     /**
      * \brief Iterator to the beginning of the chains.

@@ -43,6 +43,9 @@ private:
     /** \brief The chain type flag. */
     int chainTypeFlag = _ChainTypeFlag;
 
+    /** \brief The chain boundary. */
+    int upperBound;
+
 public:
     /**
      * \brief Create new Chain for SparseMatrix object.
@@ -61,6 +64,25 @@ public:
      * \date 08/04/2024
      */
     Chain();
+
+    /**
+     * \brief Create new Chain for SparseMatrix object.
+     * 
+     * Constructor with size, initialize an empty Chain as a Z integers column chain with boundary check.
+     * 
+     * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
+     * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
+     * \param[in] _chainSize The upper bound of the Chain.
+     * 
+     * \see \link OSM::ZCoefficient \endlink
+     * \see \link OSM::COLUMN \endlink
+     * \see \link OSM::ROW \endlink
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 08/04/2024
+     */
+    Chain(const int _chainSize);
 
     /**
      * \brief Create new Chain for SparseMatrix object.
@@ -324,7 +346,7 @@ public:
     /**
      * \brief Get a coefficient from the chain.
      * 
-     * \warning The chain will not perform boundary check and will return 0 if out of user-chosen bounds.
+     * \warning The chain will not perform boundary check if not specified in constructor and will return 0 if out of user-chosen bounds.
      * 
      * \param[in] _index The coefficient index.
      * 
@@ -341,7 +363,7 @@ public:
     /**
      * \brief Set a coefficient in the chain.
      * 
-     * \warning The chain will not perform boundary check and will assign anyways.
+     * \warning The chain will not perform boundary check if not specified in constructor and will assign anyways.
      * 
      * \param[in] _index The coefficient index.
      * 
