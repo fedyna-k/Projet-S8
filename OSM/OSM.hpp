@@ -38,6 +38,18 @@ namespace OSM {
     template <typename _CoefficientType, int _ChainTypeFlag>
     class Chain;
 
+    /**
+     * \class SparseMatrix
+     * \brief Vector<Map> implementation of sparse matrices.
+     * 
+     * The SparseMatrix class contains all algebraic functions that are related to matrix.
+     * 
+     * \tparam _ChainType The matrix chains types (default is default OSM::Chain)
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 08/04/2024
+     */
     template <typename _ChainType>
     class SparseMatrix;
 

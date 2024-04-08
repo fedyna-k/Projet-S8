@@ -3,7 +3,7 @@
  * \brief Namespace file for describing library.
  * \author Fedyna K.
  * \version 0.1.0
- * \date 02/04/2024
+ * \date 08/04/2024
  * 
  * Define everything for the Chain class
  */
@@ -28,7 +28,7 @@
  * 
  * \author Fedyna K.
  * \version 0.1.0
- * \date 07/04/2024
+ * \date 08/04/2024
  */
 template <typename _CoefficientType = OSM::ZCoefficient, int _ChainTypeFlag = OSM::COLUMN>
 class OSM::Chain {
@@ -58,7 +58,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     Chain();
 
@@ -82,7 +82,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     Chain(const Chain &_otherToCopy);
 
@@ -103,7 +103,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     Chain& operator=(const Chain &_otherToCopy);
 
@@ -126,7 +126,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
     friend Chain operator+(const Chain<_CT, _CTF> &_first, const Chain<_CT, _CTF> &_second);
@@ -150,7 +150,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
     friend Chain operator-(const Chain<_CT, _CTF> &_first, const Chain<_CT, _CTF> &_second);
@@ -169,7 +169,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
     friend Chain operator*(const int _lambda, const Chain<_CT, _CTF> &_chain);
@@ -188,7 +188,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
     friend Chain operator*(const Chain<_CT, _CTF> &_chain, const _CT _lambda);
@@ -211,7 +211,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT>
     friend SparseMatrix<Chain<_CT, COLUMN>> operator*(const Chain<_CT, COLUMN> &_column, const Chain<_CT, ROW> &_row);
@@ -234,7 +234,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT>
     friend SparseMatrix<Chain<_CT, ROW>> operator%(const Chain<_CT, COLUMN> &_column, const Chain<_CT, ROW> &_row);
@@ -255,7 +255,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT>
     friend _CT operator*(const Chain<_CT, ROW> &_row, const Chain<_CT, COLUMN> &_column);
@@ -278,7 +278,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     Chain& operator+=(const Chain &_other);
 
@@ -300,7 +300,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     Chain& operator-=(const Chain &_other);
 
@@ -317,7 +317,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     Chain& operator*=(const int _lambda);
 
@@ -334,7 +334,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     _CoefficientType operator[](const int _index) const;
 
@@ -351,7 +351,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     _CoefficientType& operator[](const int _index);
 
@@ -372,7 +372,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
     friend Chain<_CT, _CTF> operator/(const Chain<_CT, _CTF> &_chain, const std::vector<int> &_indexes);
@@ -394,7 +394,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
     friend Chain<_CT, _CTF> operator/(const Chain<_CT, _CTF> &_chain, const int *_indexes);
@@ -415,7 +415,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     Chain& operator/=(const std::vector<int> &_indexes);
 
@@ -435,7 +435,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     Chain& operator/=(const int *_indexes);
 
@@ -453,7 +453,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     inline typename std::unordered_map<int, _CoefficientType>::iterator begin() noexcept;
 
@@ -471,7 +471,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     inline typename std::unordered_map<int, _CoefficientType>::const_iterator begin() const noexcept;
 
@@ -489,7 +489,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     inline typename std::unordered_map<int, _CoefficientType>::const_iterator cbegin() const noexcept;
 
@@ -507,7 +507,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     inline typename std::unordered_map<int, _CoefficientType>::iterator end() noexcept;
 
@@ -525,7 +525,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     inline typename std::unordered_map<int, _CoefficientType>::const_iterator end() const noexcept;
 
@@ -543,7 +543,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     inline typename std::unordered_map<int, _CoefficientType>::const_iterator cend() const noexcept;
 
@@ -556,7 +556,7 @@ public:
      * 
      * \author Fedyna K.
      * \version 0.1.0
-     * \date 07/04/2024
+     * \date 08/04/2024
      */
     inline Chain transpose();
 };
