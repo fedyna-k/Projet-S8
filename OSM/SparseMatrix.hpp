@@ -357,6 +357,76 @@ public:
     _ChainType& operator[](const int _index);
 
     /**
+     * \brief Get a column from the matrix, even if matrix is a row-chain matrix.
+     * 
+     * \note For column-chain matrixes, it is equivalent to operator[]. 
+     * 
+     * \warning The matrix will perform boundary check.
+     * 
+     * \param[in] _index The coefficient index.
+     * 
+     * \return The column stored at given index.
+     * 
+     * \see \link OSM::Chain \endlink
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 17/04/2024
+     */
+    template <typename _CT>
+    Chain<_CT, COLUMN> getColumn(const int _index) const;
+
+    /**
+     * \brief Get a row from the matrix, even if matrix is a row-chain matrix.
+     * 
+     * \note For row-chain matrixes, it is equivalent to operator[]. 
+     * 
+     * \warning The matrix will perform boundary check.
+     * 
+     * \param[in] _index The coefficient index.
+     * 
+     * \return The row stored at given index.
+     * 
+     * \see \link OSM::Chain \endlink
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 17/04/2024
+     */
+    template <typename _CT>
+    Chain<_CT, ROW> getRow(const int _index) const;
+
+    /**
+     * \brief Set a column from the matrix, even if matrix is a row-chain matrix.
+     * 
+     * \warning The matrix will perform boundary check.
+     * 
+     * \param[in] _index The coefficient index.
+     * 
+     * \see \link OSM::Chain \endlink
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 17/04/2024
+     */
+    void setColumn(const int _index);
+
+     /**
+     * \brief Set a row from the matrix, even if matrix is a row-chain matrix.
+     * 
+     * \warning The matrix will perform boundary check.
+     * 
+     * \param[in] _index The coefficient index.
+     * 
+     * \see \link OSM::Chain \endlink
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 17/04/2024
+     */
+    void setRow(const int _index);
+
+    /**
      * \brief Get a submatrix from the matrix.
      * 
      * Removes all indexes provided in the vector from the matrix and returns it.

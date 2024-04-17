@@ -581,6 +581,32 @@ public:
      * \date 08/04/2024
      */
     inline Chain transpose();
+
+    /**
+     * \brief Checks if chain is a column.
+     * 
+     * \return true if chain is represented as a column, false otherwise.
+     * 
+     * \see \link OSM::Chain \endlink
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 17/04/2024
+     */
+    bool isColumn() const;
+
+    /**
+     * \brief Checks if chain is a row.
+     * 
+     * \return true if chain is represented as a row, false otherwise.
+     * 
+     * \see \link OSM::Chain \endlink
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 17/04/2024
+     */
+    bool isRow() const;
 };
 
 
