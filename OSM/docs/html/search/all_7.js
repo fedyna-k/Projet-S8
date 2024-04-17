@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['zcoefficient_27',['ZCoefficient',['../_o_s_m_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06',1,'OSM']]]
+  ['setcolumn_0',['setColumn',['../classOSM_1_1SparseMatrix.html#ad9c0907aaae076d367537d7fb82bc58c',1,'OSM::SparseMatrix']]],
+  ['setrow_1',['setRow',['../classOSM_1_1SparseMatrix.html#a391371531c08c9dc3393b0b096be145a',1,'OSM::SparseMatrix']]],
+  ['sparsematrix_2',['SparseMatrix',['../classOSM_1_1SparseMatrix.html',1,'OSM::SparseMatrix&lt; _ChainType &gt;'],['../classSparseMatrix.html',1,'SparseMatrix'],['../classOSM_1_1SparseMatrix.html#a3c3efe3cfdb370d681853a21e696da66',1,'OSM::SparseMatrix::SparseMatrix()'],['../classOSM_1_1SparseMatrix.html#ae7005a7830cf93de703a9dcea5fdb895',1,'OSM::SparseMatrix::SparseMatrix(const int _chainCount)'],['../classOSM_1_1SparseMatrix.html#a5b21fb6c6330ea680fb18c819aa7aff0',1,'OSM::SparseMatrix::SparseMatrix(const SparseMatrix &amp;_otherToCopy)']]],
+  ['sparsematrix_2ehpp_3',['SparseMatrix.hpp',['../SparseMatrix_8hpp.html',1,'']]]
 ];
