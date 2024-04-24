@@ -16,6 +16,8 @@
 #include <stdint.h>
 
 
+namespace OSM {
+    
 /**
  * \class SparseMatrix
  * \brief Vector<Map> implementation of sparse matrices.
@@ -29,7 +31,7 @@
  * \date 08/04/2024
  */
 template <typename _ChainType = OSM::Chain<OSM::ZCoefficient, OSM::COLUMN>>
-class OSM::SparseMatrix {
+class SparseMatrix {
 
 private:
     /** \brief The inner chain storage. */
@@ -402,6 +404,7 @@ public:
      * \warning The matrix will perform boundary check.
      * 
      * \param[in] _index The coefficient index.
+     * \param[in] _chain The new column.
      * 
      * \see \link OSM::Chain \endlink
      * 
@@ -409,14 +412,16 @@ public:
      * \version 0.1.0
      * \date 17/04/2024
      */
-    void setColumn(const int _index);
+    template <typename _CT>
+    void setColumn(const int _index, const Chain<_CT, COLUMN> &_chain);
 
-     /**
+    /**
      * \brief Set a row from the matrix, even if matrix is a row-chain matrix.
      * 
      * \warning The matrix will perform boundary check.
      * 
      * \param[in] _index The coefficient index.
+     * \param[in] _chain The new row.
      * 
      * \see \link OSM::Chain \endlink
      * 
@@ -424,7 +429,8 @@ public:
      * \version 0.1.0
      * \date 17/04/2024
      */
-    void setRow(const int _index);
+    template <typename _CT>
+    void setRow(const int _index, const Chain<_CT, ROW> &_chain);
 
     /**
      * \brief Get a submatrix from the matrix.
@@ -755,5 +761,6 @@ public:
     inline SparseMatrix transpose();
 };
 
+}
 
 #endif

@@ -12,10 +12,12 @@
 #define __OSM_CHAIN__
 
 
-#include "OSM.hpp"
+#include "__base.hpp"
 #include <unordered_map>
 #include <vector>
 
+
+namespace OSM {
 
 /**
  * \class Chain
@@ -31,7 +33,7 @@
  * \date 08/04/2024
  */
 template <typename _CoefficientType = OSM::ZCoefficient, int _ChainTypeFlag = OSM::COLUMN>
-class OSM::Chain {
+class Chain {
 
 private:
     /** \brief The chain inner representation and storage of data. */
@@ -609,5 +611,6 @@ public:
     bool isRow() const;
 };
 
+}
 
 #endif

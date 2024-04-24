@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sparsematrix_2ehpp_0',['SparseMatrix.hpp',['../SparseMatrix_8hpp.html',1,'']]]
+  ['osm_2ehpp_0',['OSM.hpp',['../_o_s_m_8hpp.html',1,'']]]
 ];

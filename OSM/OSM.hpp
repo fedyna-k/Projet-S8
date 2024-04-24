@@ -12,50 +12,8 @@
 #ifndef __OPTIMISED_SPARSED_MATRIX__
 #define __OPTIMISED_SPARSED_MATRIX__
 
-
-namespace OSM {
-    /** \brief Chain type flag for column chain. */
-    const int COLUMN = 0b01;
-    /** \brief Chain type flag for row chain. */
-    const int ROW    = 0b10;
-
-    /** \brief The default type for signed integers. */
-    typedef int ZCoefficient;
-
-    /**
-     * \class Chain
-     * \brief Allow to create row/column sparse vectors.
-     * 
-     * The Chain class contains all algebraic functions that are related to vectors.
-     * 
-     * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
-     * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
-     * 
-     * \author Fedyna K.
-     * \version 0.1.0
-     * \date 07/04/2024
-     */
-    template <typename _CoefficientType, int _ChainTypeFlag>
-    class Chain;
-
-    /**
-     * \class SparseMatrix
-     * \brief Vector<Map> implementation of sparse matrices.
-     * 
-     * The SparseMatrix class contains all algebraic functions that are related to matrix.
-     * 
-     * \tparam _ChainType The matrix chains types (default is default OSM::Chain)
-     * 
-     * \author Fedyna K.
-     * \version 0.1.0
-     * \date 08/04/2024
-     */
-    template <typename _ChainType>
-    class SparseMatrix;
-
-    class BinaryMatrix;
-    
-}
-
+#include "__base.hpp"
+#include "Chain.hpp"
+#include "SparseMatrix.hpp"
 
 #endif

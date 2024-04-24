@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zcoefficient_0',['ZCoefficient',['../OSM_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06',1,'OSM']]]
+  ['transpose_0',['transpose',['../class_o_s_m_1_1_chain.html#adefbe744da9a86cea97cb805a0598caf',1,'OSM::Chain::transpose()'],['../class_o_s_m_1_1_sparse_matrix.html#ab2e32d6ffe38202f5b6880c62765367c',1,'OSM::SparseMatrix::transpose()']]]
 ];

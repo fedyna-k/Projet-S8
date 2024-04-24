@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OSM: OSM/OSM.hpp Source File</title>
+<title>OSM: OSM/__base.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,21 +79,25 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">OSM.hpp</div></div>
+  <div class="headertitle"><div class="title">__base.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_o_s_m_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef __OPTIMISED_SPARSED_MATRIX__</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define __OPTIMISED_SPARSED_MATRIX__</span></div>
+<a href="____base_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __OPTIMISED_SPARSED_MATRIX_BASE__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __OPTIMISED_SPARSED_MATRIX_BASE__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="____base_8hpp.html">__base.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_chain_8hpp.html">Chain.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_sparse_matrix_8hpp.html">SparseMatrix.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a____base_8hpp_html"><div class="ttname"><a href="____base_8hpp.html">__base.hpp</a></div><div class="ttdoc">Defines all constants used by objects.</div></div>
-<div class="ttc" id="a_chain_8hpp_html"><div class="ttname"><a href="_chain_8hpp.html">Chain.hpp</a></div><div class="ttdoc">Namespace file for describing library.</div></div>
-<div class="ttc" id="a_sparse_matrix_8hpp_html"><div class="ttname"><a href="_sparse_matrix_8hpp.html">SparseMatrix.hpp</a></div><div class="ttdoc">Namespace file for describing library.</div></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>OSM {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">   17</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> = 0b01;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">   19</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a>    = 0b10;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="____base_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06">   22</a></span>    <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code hl_typedef" href="____base_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06">ZCoefficient</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a____base_8hpp_html_a634c62842065ac17dcbfdf4af4c37821"><div class="ttname"><a href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">OSM::COLUMN</a></div><div class="ttdeci">const int COLUMN</div><div class="ttdoc">Chain type flag for column chain.</div><div class="ttdef"><b>Definition</b> __base.hpp:17</div></div>
+<div class="ttc" id="a____base_8hpp_html_abb36b9d000fcde24bce19f9b064b4b06"><div class="ttname"><a href="____base_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06">OSM::ZCoefficient</a></div><div class="ttdeci">int ZCoefficient</div><div class="ttdoc">The default type for signed integers.</div><div class="ttdef"><b>Definition</b> __base.hpp:22</div></div>
+<div class="ttc" id="a____base_8hpp_html_afa42b39d638eebb5a395d53dd3113427"><div class="ttname"><a href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">OSM::ROW</a></div><div class="ttdeci">const int ROW</div><div class="ttdoc">Chain type flag for row chain.</div><div class="ttdef"><b>Definition</b> __base.hpp:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

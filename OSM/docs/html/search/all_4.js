@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['iscolumn_0',['isColumn',['../classOSM_1_1Chain.html#a1b668df0b46695823e85682163d44b1d',1,'OSM::Chain']]],
-  ['isrow_1',['isRow',['../classOSM_1_1Chain.html#a5c4f549e69de750b5323a90893acb26e',1,'OSM::Chain']]]
+  ['getcolumn_0',['getColumn',['../class_o_s_m_1_1_sparse_matrix.html#ad8481b4199730505d11501923df6ee4c',1,'OSM::SparseMatrix']]],
+  ['getrow_1',['getRow',['../class_o_s_m_1_1_sparse_matrix.html#a45f9e1a57f88e2e5f7bb120129deae92',1,'OSM::SparseMatrix']]]
 ];
