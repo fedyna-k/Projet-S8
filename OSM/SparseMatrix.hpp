@@ -24,18 +24,26 @@ namespace OSM {
  * 
  * The SparseMatrix class contains all algebraic functions that are related to matrix.
  * 
- * \tparam _ChainType The matrix chains types (default is default OSM::Chain)
+ * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
+ * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
  * 
  * \author Fedyna K.
  * \version 0.1.0
  * \date 08/04/2024
  */
-template <typename _ChainType = OSM::Chain<OSM::ZCoefficient, OSM::COLUMN>>
+template <typename _CoefficientType, int _ChainTypeFlag>
 class SparseMatrix {
+
+public:
+    typedef Chain<_CoefficientType, _ChainTypeFlag> MatrixChain;
+    typedef typename std::vector<MatrixChain>::iterator iterator;
+    typedef typename std::vector<MatrixChain>::const_iterator const_iterator;
+    typedef typename std::vector<MatrixChain>::reverse_iterator reverse_iterator;
+    typedef typename std::vector<MatrixChain>::const_reverse_iterator const_reverse_iterator;
 
 private:
     /** \brief The inner chain storage. */
-    std::vector<_ChainType> chains;
+    std::vector<MatrixChain> chains;
 
     /** \brief A vector of int containing state of each columns. */
     std::vector<uint64_t> chainsStates;
@@ -48,8 +56,10 @@ public:
      * \brief Create new SparseMatrix object.
      * 
      * Default constructor, initialize an empty Matrix as Z integers column chains.
+     * The default matrox size is 128x128.
      * 
-     * \tparam _ChainType The matrix chains types (default is default OSM::Chain)
+     * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
+     * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
      * 
      * \see \link OSM::Chain \endlink
      * 
@@ -64,8 +74,10 @@ public:
      * 
      * Constructor with size, initialize an empty Matrix as Z integers column chains.
      * 
-     * \tparam _ChainType The matrix chains types (default is default OSM::Chain)
-     * \param[in] _chainCount The number of chains to preallocate.
+     * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
+     * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
+     * \param[in] _rowCount The number of rows to preallocate.
+     * \param[in] _columnCount The number of columns to preallocate.
      * 
      * \see \link OSM::Chain \endlink
      * 
@@ -73,7 +85,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    SparseMatrix(const int _chainCount);
+    SparseMatrix(const int _rowCount, const int _columnCount);
 
     /**
      * \brief Create new Chain for SparseMatrix object.
@@ -85,7 +97,8 @@ public:
      * 
      * \warning Will raise an error if the other matrix is not the same chain type.
      * 
-     * \tparam _ChainType The matrix chains types (default is default OSM::Chain)
+     * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
+     * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
      * \param[in] _otherToCopy The matrix we want to copy.
      * 
      * \see \link OSM::Chain \endlink
@@ -137,8 +150,8 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    template <typename _CT>
-    friend SparseMatrix operator+(const SparseMatrix<_CT> &_first, const SparseMatrix<_CT> &_second);
+    template <typename _CT, int _CTF>
+    friend SparseMatrix operator+(const SparseMatrix<_CT, _CTF> &_first, const SparseMatrix<_CT, _CTF> &_second);
 
     /**
      * \brief Substracts two matrices together.
@@ -160,8 +173,8 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    template <typename _CT>
-    friend SparseMatrix operator-(const SparseMatrix<_CT> &_first, const SparseMatrix<_CT> &_second);
+    template <typename _CT, int _CTF>
+    friend SparseMatrix operator-(const SparseMatrix<_CT, _CTF> &_first, const SparseMatrix<_CT, _CTF> &_second);
 
     /**
      * \brief Apply factor on each coefficients.
@@ -179,8 +192,8 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    template <typename _CT>
-    friend SparseMatrix operator*(const int _lambda, const SparseMatrix<_CT> &_matrix);
+    template <typename _CT, int _CTF>
+    friend SparseMatrix operator*(const int _lambda, const SparseMatrix<_CT, _CTF> &_matrix);
 
     /**
      * \brief Apply factor on each coefficients.
@@ -198,8 +211,8 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    template <typename _CT>
-    friend SparseMatrix operator*(const SparseMatrix<_CT> &_matrix, const int _lambda);
+    template <typename _CT, int _CTF>
+    friend SparseMatrix operator*(const SparseMatrix<_CT, _CTF> &_matrix, const int _lambda);
 
     /**
      * \brief Perform matrix multiplication between two chains.
@@ -222,7 +235,7 @@ public:
      * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
-    friend SparseMatrix<Chain<_CT, COLUMN>> operator*(const SparseMatrix<Chain<_CT, _CTF>> &_first, const SparseMatrix<Chain<_CT, _CTF>> &_second);
+    friend SparseMatrix<_CT, COLUMN> operator*(const SparseMatrix<_CT, _CTF> &_first, const SparseMatrix<_CT, _CTF> &_second);
 
     /**
      * \brief Perform matrix multiplication between two chains.
@@ -245,7 +258,7 @@ public:
      * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
-    friend SparseMatrix<Chain<_CT, ROW>> operator%(const SparseMatrix<Chain<_CT, _CTF>> &_first, const SparseMatrix<Chain<_CT, _CTF>> &_second);
+    friend SparseMatrix<_CT, ROW> operator%(const SparseMatrix<_CT, _CTF> &_first, const SparseMatrix<_CT, _CTF> &_second);
 
     /**
      * \brief Add a matrix and assign.
@@ -322,7 +335,7 @@ public:
      * \date 08/04/2024
      */
     template <typename _CT, int _CTF>
-    SparseMatrix& operator*=(const SparseMatrix<Chain<_CT, _CTF>> &_other);
+    SparseMatrix& operator*=(const SparseMatrix<_CT, _CTF> &_other);
 
     /**
      * \brief Get a chain from the matrix.
@@ -339,7 +352,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    _ChainType operator[](const int _index) const;
+    MatrixChain operator[](const int _index) const;
 
     /**
      * \brief Set a chain from the matrix.
@@ -356,7 +369,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    _ChainType& operator[](const int _index);
+    MatrixChain& operator[](const int _index);
 
     /**
      * \brief Get a column from the matrix, even if matrix is a row-chain matrix.
@@ -535,7 +548,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::iterator begin() noexcept;
+    inline iterator begin() noexcept;
 
     /**
      * \brief Constant iterator to the beginning of the chains.
@@ -554,7 +567,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::const_iterator begin() const noexcept;
+    inline const_iterator begin() const noexcept;
 
     /**
      * \brief Constant iterator to the beginning of the chains.
@@ -573,7 +586,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::const_iterator cbegin() const noexcept;
+    inline const_iterator cbegin() const noexcept;
 
     /**
      * \brief Reverse iterator to the beginning of the chains.
@@ -592,7 +605,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::reverse_iterator rbegin() noexcept;
+    inline reverse_iterator rbegin() noexcept;
 
     /**
      * \brief Constant reverse iterator to the beginning of the chains.
@@ -611,7 +624,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::const_reverse_iterator rbegin() const noexcept;
+    inline const_reverse_iterator rbegin() const noexcept;
 
     /**
      * \brief Constant reverse iterator to the beginning of the chains.
@@ -630,7 +643,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::const_reverse_iterator crbegin() const noexcept;
+    inline const_reverse_iterator crbegin() const noexcept;
 
     /**
      * \brief Iterator to the endning of the chains.
@@ -649,7 +662,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::iterator end() noexcept;
+    inline iterator end() noexcept;
 
     /**
      * \brief Constant iterator to the endning of the chains.
@@ -668,7 +681,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::const_iterator end() const noexcept;
+    inline const_iterator end() const noexcept;
 
     /**
      * \brief Constant iterator to the endning of the chains.
@@ -687,7 +700,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::const_iterator cend() const noexcept;
+    inline const_iterator cend() const noexcept;
 
     /**
      * \brief Reverse iterator to the endning of the chains.
@@ -706,7 +719,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::reverse_iterator rend() noexcept;
+    inline reverse_iterator rend() noexcept;
 
     /**
      * \brief Constant reverse iterator to the endning of the chains.
@@ -725,7 +738,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::const_reverse_iterator rend() const noexcept;
+    inline const_reverse_iterator rend() const noexcept;
 
     /**
      * \brief Constant reverse iterator to the endning of the chains.
@@ -744,7 +757,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::vector<_ChainType>::const_reverse_iterator crend() const noexcept;
+    inline const_reverse_iterator crend() const noexcept;
 
 
     /**

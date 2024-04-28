@@ -32,8 +32,12 @@ namespace OSM {
  * \version 0.1.0
  * \date 08/04/2024
  */
-template <typename _CoefficientType = OSM::ZCoefficient, int _ChainTypeFlag = OSM::COLUMN>
+template <typename _CoefficientType, int _ChainTypeFlag>
 class Chain {
+
+public:
+    typedef typename std::unordered_map<int, _CoefficientType>::iterator iterator;
+    typedef typename std::unordered_map<int, _CoefficientType>::const_iterator const_iterator;
 
 private:
     /** \brief The chain inner representation and storage of data. */
@@ -53,6 +57,7 @@ public:
      * \brief Create new Chain for SparseMatrix object.
      * 
      * Default constructor, initialize an empty Chain as a Z integers column chain.
+     * The default chain size is 128.
      * 
      * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
      * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
@@ -234,7 +239,7 @@ public:
      * \date 08/04/2024
      */
     template <typename _CT>
-    friend SparseMatrix<Chain<_CT, COLUMN>> operator*(const Chain<_CT, COLUMN> &_column, const Chain<_CT, ROW> &_row);
+    friend SparseMatrix<_CT, COLUMN> operator*(const Chain<_CT, COLUMN> &_column, const Chain<_CT, ROW> &_row);
 
     /**
      * \brief Perform matrix multiplication between two chains.
@@ -257,7 +262,7 @@ public:
      * \date 08/04/2024
      */
     template <typename _CT>
-    friend SparseMatrix<Chain<_CT, ROW>> operator%(const Chain<_CT, COLUMN> &_column, const Chain<_CT, ROW> &_row);
+    friend SparseMatrix<_CT, ROW> operator%(const Chain<_CT, COLUMN> &_column, const Chain<_CT, ROW> &_row);
 
     /**
      * \brief Perform dot product between two chains.
@@ -473,7 +478,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::unordered_map<int, _CoefficientType>::iterator begin() noexcept;
+    inline iterator begin() noexcept;
 
     /**
      * \brief Constant iterator to the beginning of the chain.
@@ -491,7 +496,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::unordered_map<int, _CoefficientType>::const_iterator begin() const noexcept;
+    inline const_iterator begin() const noexcept;
 
     /**
      * \brief Constant iterator to the beginning of the chain.
@@ -509,7 +514,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::unordered_map<int, _CoefficientType>::const_iterator cbegin() const noexcept;
+    inline const_iterator cbegin() const noexcept;
 
     /**
      * \brief Iterator to the end of the chain.
@@ -527,7 +532,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::unordered_map<int, _CoefficientType>::iterator end() noexcept;
+    inline iterator end() noexcept;
 
     /**
      * \brief Constant iterator to the end of the chain.
@@ -545,7 +550,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::unordered_map<int, _CoefficientType>::const_iterator end() const noexcept;
+    inline const_iterator end() const noexcept;
 
     /**
      * \brief Constant iterator to the end of the chain.
@@ -563,7 +568,7 @@ public:
      * \version 0.1.0
      * \date 08/04/2024
      */
-    inline typename std::unordered_map<int, _CoefficientType>::const_iterator cend() const noexcept;
+    inline const_iterator cend() const noexcept;
 
     /**
      * \brief Transpose a Chain.

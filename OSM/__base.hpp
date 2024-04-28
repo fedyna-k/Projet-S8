@@ -20,6 +20,38 @@ namespace OSM {
 
     /** \brief The default type for signed integers. */
     typedef int ZCoefficient;
+
+    /**
+     * \class SparseMatrix
+     * \brief Vector<Map> implementation of sparse matrices.
+     * 
+     * The SparseMatrix class contains all algebraic functions that are related to matrix.
+     * 
+     * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
+     * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 08/04/2024
+     */
+    template <typename _CoefficientType = OSM::ZCoefficient, int _ChainTypeFlag = OSM::COLUMN>
+    class SparseMatrix;
+
+    /**
+     * \class Chain
+     * \brief Allow to create row/column sparse vectors.
+     * 
+     * The Chain class contains all algebraic functions that are related to vectors.
+     * 
+     * \tparam _CoefficientType The chain's coefficient types (default is OSM::ZCoefficient)
+     * \tparam _ChainTypeFlag The type of vector the chain is representing (default is OSM::COLUMN)
+     * 
+     * \author Fedyna K.
+     * \version 0.1.0
+     * \date 08/04/2024
+     */
+    template <typename _CoefficientType = OSM::ZCoefficient, int _ChainTypeFlag = OSM::COLUMN>
+    class Chain;
 }
 
 #endif
