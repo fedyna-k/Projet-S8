@@ -88,30 +88,14 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef __OPTIMISED_SPARSED_MATRIX__</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define __OPTIMISED_SPARSED_MATRIX__</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>OSM {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="OSM_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">   18</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="OSM_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> = 0b01;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="OSM_8hpp.html#afa42b39d638eebb5a395d53dd3113427">   20</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="OSM_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a>    = 0b10;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="OSM_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06">   23</a></span>    <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code hl_typedef" href="OSM_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06">ZCoefficient</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> _CoefficientType, <span class="keywordtype">int</span> _ChainTypeFlag&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">class </span><a class="code hl_class" href="classOSM_1_1Chain.html">Chain</a>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> _ChainType&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">class </span><a class="code hl_class" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">class </span>BinaryMatrix;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aOSM_8hpp_html_a634c62842065ac17dcbfdf4af4c37821"><div class="ttname"><a href="OSM_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">OSM::COLUMN</a></div><div class="ttdeci">const int COLUMN</div><div class="ttdoc">Chain type flag for column chain.</div><div class="ttdef"><b>Definition</b> OSM.hpp:18</div></div>
-<div class="ttc" id="aOSM_8hpp_html_abb36b9d000fcde24bce19f9b064b4b06"><div class="ttname"><a href="OSM_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06">OSM::ZCoefficient</a></div><div class="ttdeci">int ZCoefficient</div><div class="ttdoc">The default type for signed integers.</div><div class="ttdef"><b>Definition</b> OSM.hpp:23</div></div>
-<div class="ttc" id="aOSM_8hpp_html_afa42b39d638eebb5a395d53dd3113427"><div class="ttname"><a href="OSM_8hpp.html#afa42b39d638eebb5a395d53dd3113427">OSM::ROW</a></div><div class="ttdeci">const int ROW</div><div class="ttdoc">Chain type flag for row chain.</div><div class="ttdef"><b>Definition</b> OSM.hpp:20</div></div>
-<div class="ttc" id="aclassOSM_1_1Chain_html"><div class="ttname"><a href="classOSM_1_1Chain.html">OSM::Chain</a></div><div class="ttdoc">Allow to create row/column sparse vectors.</div><div class="ttdef"><b>Definition</b> Chain.hpp:34</div></div>
-<div class="ttc" id="aclassOSM_1_1SparseMatrix_html"><div class="ttname"><a href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a></div><div class="ttdoc">Vector&lt;Map&gt; implementation of sparse matrices.</div><div class="ttdef"><b>Definition</b> SparseMatrix.hpp:32</div></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="____base_8hpp.html">__base.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="Chain_8hpp.html">Chain.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="SparseMatrix_8hpp.html">SparseMatrix.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aChain_8hpp_html"><div class="ttname"><a href="Chain_8hpp.html">Chain.hpp</a></div><div class="ttdoc">Namespace file for describing library.</div></div>
+<div class="ttc" id="aSparseMatrix_8hpp_html"><div class="ttname"><a href="SparseMatrix_8hpp.html">SparseMatrix.hpp</a></div><div class="ttdoc">Namespace file for describing library.</div></div>
+<div class="ttc" id="a____base_8hpp_html"><div class="ttname"><a href="____base_8hpp.html">__base.hpp</a></div><div class="ttdoc">Defines all constants used by objects.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

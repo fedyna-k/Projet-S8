@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getcolumn_0',['getColumn',['../class_o_s_m_1_1_sparse_matrix.html#ad8481b4199730505d11501923df6ee4c',1,'OSM::SparseMatrix']]],
-  ['getrow_1',['getRow',['../class_o_s_m_1_1_sparse_matrix.html#a45f9e1a57f88e2e5f7bb120129deae92',1,'OSM::SparseMatrix']]]
+  ['getcolumn_0',['getColumn',['../classOSM_1_1SparseMatrix.html#ae96e21f6bfa575c5014304e63dedc5c0',1,'OSM::SparseMatrix']]],
+  ['getrow_1',['getRow',['../classOSM_1_1SparseMatrix.html#a7cd8c3a1062e0b583434c96f9397b285',1,'OSM::SparseMatrix']]]
 ];

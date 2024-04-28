@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OSM: OSM::SparseMatrix&lt; _ChainType &gt; Class Template Reference</title>
+<title>OSM: OSM::SparseMatrix&lt; _CoefficientType, _ChainTypeFlag &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,137 +77,158 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classOSM_1_1SparseMatrix-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">OSM::SparseMatrix&lt; _ChainType &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">OSM::SparseMatrix&lt; _CoefficientType, _ChainTypeFlag &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Vector&lt;Map&gt; implementation of sparse matrices.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="OSM_8hpp_source.html">OSM.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="____base_8hpp_source.html">__base.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2ffb92a88d1d2c8944e7954bb7b76f1e" id="r_a2ffb92a88d1d2c8944e7954bb7b76f1e"><td class="memItemLeft" align="right" valign="top"><a id="a2ffb92a88d1d2c8944e7954bb7b76f1e" name="a2ffb92a88d1d2c8944e7954bb7b76f1e"></a>
+typedef <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CoefficientType, _ChainTypeFlag &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MatrixChain</b></td></tr>
+<tr class="separator:a2ffb92a88d1d2c8944e7954bb7b76f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b1b9203e8fae28f9d77f99938d5aa1" id="r_a67b1b9203e8fae28f9d77f99938d5aa1"><td class="memItemLeft" align="right" valign="top"><a id="a67b1b9203e8fae28f9d77f99938d5aa1" name="a67b1b9203e8fae28f9d77f99938d5aa1"></a>
+typedef std::vector&lt; <a class="el" href="classOSM_1_1Chain.html">MatrixChain</a> &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
+<tr class="separator:a67b1b9203e8fae28f9d77f99938d5aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f97423b588aa3cf8d9a23f9e5db3bbf" id="r_a4f97423b588aa3cf8d9a23f9e5db3bbf"><td class="memItemLeft" align="right" valign="top"><a id="a4f97423b588aa3cf8d9a23f9e5db3bbf" name="a4f97423b588aa3cf8d9a23f9e5db3bbf"></a>
+typedef std::vector&lt; <a class="el" href="classOSM_1_1Chain.html">MatrixChain</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
+<tr class="separator:a4f97423b588aa3cf8d9a23f9e5db3bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894fc60d8c6cbf65746bb7b30b5c075e" id="r_a894fc60d8c6cbf65746bb7b30b5c075e"><td class="memItemLeft" align="right" valign="top"><a id="a894fc60d8c6cbf65746bb7b30b5c075e" name="a894fc60d8c6cbf65746bb7b30b5c075e"></a>
+typedef std::vector&lt; <a class="el" href="classOSM_1_1Chain.html">MatrixChain</a> &gt;::reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>reverse_iterator</b></td></tr>
+<tr class="separator:a894fc60d8c6cbf65746bb7b30b5c075e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab6d04f92e1c78f884811c9ab6d9536" id="r_a1ab6d04f92e1c78f884811c9ab6d9536"><td class="memItemLeft" align="right" valign="top"><a id="a1ab6d04f92e1c78f884811c9ab6d9536" name="a1ab6d04f92e1c78f884811c9ab6d9536"></a>
+typedef std::vector&lt; <a class="el" href="classOSM_1_1Chain.html">MatrixChain</a> &gt;::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_reverse_iterator</b></td></tr>
+<tr class="separator:a1ab6d04f92e1c78f884811c9ab6d9536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c3efe3cfdb370d681853a21e696da66" id="r_a3c3efe3cfdb370d681853a21e696da66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c3efe3cfdb370d681853a21e696da66">SparseMatrix</a> ()</td></tr>
-<tr class="memdesc:a3c3efe3cfdb370d681853a21e696da66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="classOSM_1_1SparseMatrix.html" title="Vector&lt;Map&gt; implementation of sparse matrices.">SparseMatrix</a> object.  <br /></td></tr>
-<tr class="separator:a3c3efe3cfdb370d681853a21e696da66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7005a7830cf93de703a9dcea5fdb895" id="r_ae7005a7830cf93de703a9dcea5fdb895"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7005a7830cf93de703a9dcea5fdb895">SparseMatrix</a> (const int _chainCount)</td></tr>
-<tr class="memdesc:ae7005a7830cf93de703a9dcea5fdb895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="classOSM_1_1SparseMatrix.html" title="Vector&lt;Map&gt; implementation of sparse matrices.">SparseMatrix</a> object.  <br /></td></tr>
-<tr class="separator:ae7005a7830cf93de703a9dcea5fdb895"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b21fb6c6330ea680fb18c819aa7aff0" id="r_a5b21fb6c6330ea680fb18c819aa7aff0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b21fb6c6330ea680fb18c819aa7aff0">SparseMatrix</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;_otherToCopy)</td></tr>
-<tr class="memdesc:a5b21fb6c6330ea680fb18c819aa7aff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="classOSM_1_1Chain.html" title="Allow to create row/column sparse vectors.">Chain</a> for <a class="el" href="classOSM_1_1SparseMatrix.html" title="Vector&lt;Map&gt; implementation of sparse matrices.">SparseMatrix</a> object.  <br /></td></tr>
-<tr class="separator:a5b21fb6c6330ea680fb18c819aa7aff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc2de40e06f2ee4d296e3c92df9d051f" id="r_abc2de40e06f2ee4d296e3c92df9d051f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc2de40e06f2ee4d296e3c92df9d051f">operator=</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;_otherToCopy)</td></tr>
-<tr class="memdesc:abc2de40e06f2ee4d296e3c92df9d051f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign to other matrix.  <br /></td></tr>
-<tr class="separator:abc2de40e06f2ee4d296e3c92df9d051f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae78dd21af6583bc959aaed2a6705c5e2" id="r_ae78dd21af6583bc959aaed2a6705c5e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae78dd21af6583bc959aaed2a6705c5e2">operator+=</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;_other)</td></tr>
-<tr class="memdesc:ae78dd21af6583bc959aaed2a6705c5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a matrix and assign.  <br /></td></tr>
-<tr class="separator:ae78dd21af6583bc959aaed2a6705c5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad61b02dc0dcca8d71a613d19304e11cf" id="r_ad61b02dc0dcca8d71a613d19304e11cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad61b02dc0dcca8d71a613d19304e11cf">operator-=</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;_other)</td></tr>
-<tr class="memdesc:ad61b02dc0dcca8d71a613d19304e11cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substract a matrix and assign.  <br /></td></tr>
-<tr class="separator:ad61b02dc0dcca8d71a613d19304e11cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac93e106fa9c6ccb003831fdd6397e60d" id="r_ac93e106fa9c6ccb003831fdd6397e60d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac93e106fa9c6ccb003831fdd6397e60d">operator*=</a> (const int _lambda)</td></tr>
-<tr class="memdesc:ac93e106fa9c6ccb003831fdd6397e60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply factor on each coefficients and assign.  <br /></td></tr>
-<tr class="separator:ac93e106fa9c6ccb003831fdd6397e60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ce9312e096ef53bcaeafaaa1da5c065" id="r_a6ce9312e096ef53bcaeafaaa1da5c065"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
-<tr class="memitem:a6ce9312e096ef53bcaeafaaa1da5c065"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6ce9312e096ef53bcaeafaaa1da5c065">operator*=</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;_other)</td></tr>
-<tr class="memdesc:a6ce9312e096ef53bcaeafaaa1da5c065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply factor on each coefficients and assign.  <br /></td></tr>
-<tr class="separator:a6ce9312e096ef53bcaeafaaa1da5c065"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b6a4ef4c60b8787f4ce652277c88752" id="r_a1b6a4ef4c60b8787f4ce652277c88752"><td class="memItemLeft" align="right" valign="top">_ChainType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b6a4ef4c60b8787f4ce652277c88752">operator[]</a> (const int _index) const</td></tr>
-<tr class="memdesc:a1b6a4ef4c60b8787f4ce652277c88752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a chain from the matrix.  <br /></td></tr>
-<tr class="separator:a1b6a4ef4c60b8787f4ce652277c88752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade88c278ffeea4b30b22c52fe5ec6edc" id="r_ade88c278ffeea4b30b22c52fe5ec6edc"><td class="memItemLeft" align="right" valign="top">_ChainType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade88c278ffeea4b30b22c52fe5ec6edc">operator[]</a> (const int _index)</td></tr>
-<tr class="memdesc:ade88c278ffeea4b30b22c52fe5ec6edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a chain from the matrix.  <br /></td></tr>
-<tr class="separator:ade88c278ffeea4b30b22c52fe5ec6edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8481b4199730505d11501923df6ee4c" id="r_ad8481b4199730505d11501923df6ee4c"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
-<tr class="memitem:ad8481b4199730505d11501923df6ee4c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="OSM_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad8481b4199730505d11501923df6ee4c">getColumn</a> (const int _index) const</td></tr>
-<tr class="memdesc:ad8481b4199730505d11501923df6ee4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a column from the matrix, even if matrix is a row-chain matrix.  <br /></td></tr>
-<tr class="separator:ad8481b4199730505d11501923df6ee4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45f9e1a57f88e2e5f7bb120129deae92" id="r_a45f9e1a57f88e2e5f7bb120129deae92"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
-<tr class="memitem:a45f9e1a57f88e2e5f7bb120129deae92"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="OSM_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a45f9e1a57f88e2e5f7bb120129deae92">getRow</a> (const int _index) const</td></tr>
-<tr class="memdesc:a45f9e1a57f88e2e5f7bb120129deae92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a row from the matrix, even if matrix is a row-chain matrix.  <br /></td></tr>
-<tr class="separator:a45f9e1a57f88e2e5f7bb120129deae92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9c0907aaae076d367537d7fb82bc58c" id="r_ad9c0907aaae076d367537d7fb82bc58c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9c0907aaae076d367537d7fb82bc58c">setColumn</a> (const int _index)</td></tr>
-<tr class="memdesc:ad9c0907aaae076d367537d7fb82bc58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a column from the matrix, even if matrix is a row-chain matrix.  <br /></td></tr>
-<tr class="separator:ad9c0907aaae076d367537d7fb82bc58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a391371531c08c9dc3393b0b096be145a" id="r_a391371531c08c9dc3393b0b096be145a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391371531c08c9dc3393b0b096be145a">setRow</a> (const int _index)</td></tr>
-<tr class="memdesc:a391371531c08c9dc3393b0b096be145a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a row from the matrix, even if matrix is a row-chain matrix.  <br /></td></tr>
-<tr class="separator:a391371531c08c9dc3393b0b096be145a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56fa8db33258831c4a0c3a5af3d3c2e7" id="r_a56fa8db33258831c4a0c3a5af3d3c2e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56fa8db33258831c4a0c3a5af3d3c2e7">operator/=</a> (const std::vector&lt; int &gt; &amp;_indexes)</td></tr>
-<tr class="memdesc:a56fa8db33258831c4a0c3a5af3d3c2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a submatrix from the matrix and assign.  <br /></td></tr>
-<tr class="separator:a56fa8db33258831c4a0c3a5af3d3c2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acffec2e2785c7189b760aad30cce2994" id="r_acffec2e2785c7189b760aad30cce2994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acffec2e2785c7189b760aad30cce2994">operator/=</a> (const int *_indexes)</td></tr>
-<tr class="memdesc:acffec2e2785c7189b760aad30cce2994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a submatrix from the matrix and assign.  <br /></td></tr>
-<tr class="separator:acffec2e2785c7189b760aad30cce2994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab881ec29f8133ed1060cb763cb40458e" id="r_ab881ec29f8133ed1060cb763cb40458e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab881ec29f8133ed1060cb763cb40458e">begin</a> () noexcept</td></tr>
-<tr class="memdesc:ab881ec29f8133ed1060cb763cb40458e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator to the beginning of the chains.  <br /></td></tr>
-<tr class="separator:ab881ec29f8133ed1060cb763cb40458e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add5e9f0fa9d45e1a1fca985262662107" id="r_add5e9f0fa9d45e1a1fca985262662107"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add5e9f0fa9d45e1a1fca985262662107">begin</a> () const noexcept</td></tr>
-<tr class="memdesc:add5e9f0fa9d45e1a1fca985262662107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator to the beginning of the chains.  <br /></td></tr>
-<tr class="separator:add5e9f0fa9d45e1a1fca985262662107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab05d82c3f2aa7c52a0a55e2a61360bb8" id="r_ab05d82c3f2aa7c52a0a55e2a61360bb8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab05d82c3f2aa7c52a0a55e2a61360bb8">cbegin</a> () const noexcept</td></tr>
-<tr class="memdesc:ab05d82c3f2aa7c52a0a55e2a61360bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator to the beginning of the chains.  <br /></td></tr>
-<tr class="separator:ab05d82c3f2aa7c52a0a55e2a61360bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0786e3483a4c2092a66691e89dfd33d9" id="r_a0786e3483a4c2092a66691e89dfd33d9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0786e3483a4c2092a66691e89dfd33d9">rbegin</a> () noexcept</td></tr>
-<tr class="memdesc:a0786e3483a4c2092a66691e89dfd33d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse iterator to the beginning of the chains.  <br /></td></tr>
-<tr class="separator:a0786e3483a4c2092a66691e89dfd33d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af15daef852a86bba310b16ab68433f4c" id="r_af15daef852a86bba310b16ab68433f4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af15daef852a86bba310b16ab68433f4c">rbegin</a> () const noexcept</td></tr>
-<tr class="memdesc:af15daef852a86bba310b16ab68433f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator to the beginning of the chains.  <br /></td></tr>
-<tr class="separator:af15daef852a86bba310b16ab68433f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad759abc5f62c2eadc59f8f9b032fbded" id="r_ad759abc5f62c2eadc59f8f9b032fbded"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad759abc5f62c2eadc59f8f9b032fbded">crbegin</a> () const noexcept</td></tr>
-<tr class="memdesc:ad759abc5f62c2eadc59f8f9b032fbded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator to the beginning of the chains.  <br /></td></tr>
-<tr class="separator:ad759abc5f62c2eadc59f8f9b032fbded"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac64aae52d39222d62abac37933cde71" id="r_aac64aae52d39222d62abac37933cde71"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac64aae52d39222d62abac37933cde71">end</a> () noexcept</td></tr>
-<tr class="memdesc:aac64aae52d39222d62abac37933cde71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator to the endning of the chains.  <br /></td></tr>
-<tr class="separator:aac64aae52d39222d62abac37933cde71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a129105e936d571de92a0e35664660d7c" id="r_a129105e936d571de92a0e35664660d7c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a129105e936d571de92a0e35664660d7c">end</a> () const noexcept</td></tr>
-<tr class="memdesc:a129105e936d571de92a0e35664660d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator to the endning of the chains.  <br /></td></tr>
-<tr class="separator:a129105e936d571de92a0e35664660d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a372c1e73675e32d31f5af1b90a8799d1" id="r_a372c1e73675e32d31f5af1b90a8799d1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a372c1e73675e32d31f5af1b90a8799d1">cend</a> () const noexcept</td></tr>
-<tr class="memdesc:a372c1e73675e32d31f5af1b90a8799d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator to the endning of the chains.  <br /></td></tr>
-<tr class="separator:a372c1e73675e32d31f5af1b90a8799d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaeafacd3b3b59f9431d0e22117cb9ba" id="r_adaeafacd3b3b59f9431d0e22117cb9ba"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaeafacd3b3b59f9431d0e22117cb9ba">rend</a> () noexcept</td></tr>
-<tr class="memdesc:adaeafacd3b3b59f9431d0e22117cb9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse iterator to the endning of the chains.  <br /></td></tr>
-<tr class="separator:adaeafacd3b3b59f9431d0e22117cb9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8354b28943be95e992e80c0f89c4342" id="r_ac8354b28943be95e992e80c0f89c4342"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8354b28943be95e992e80c0f89c4342">rend</a> () const noexcept</td></tr>
-<tr class="memdesc:ac8354b28943be95e992e80c0f89c4342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator to the endning of the chains.  <br /></td></tr>
-<tr class="separator:ac8354b28943be95e992e80c0f89c4342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9957f96e2733451da94f5bfc973eb944" id="r_a9957f96e2733451da94f5bfc973eb944"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _ChainType &gt;::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9957f96e2733451da94f5bfc973eb944">crend</a> () const noexcept</td></tr>
-<tr class="memdesc:a9957f96e2733451da94f5bfc973eb944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator to the endning of the chains.  <br /></td></tr>
-<tr class="separator:a9957f96e2733451da94f5bfc973eb944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2e32d6ffe38202f5b6880c62765367c" id="r_ab2e32d6ffe38202f5b6880c62765367c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2e32d6ffe38202f5b6880c62765367c">transpose</a> ()</td></tr>
-<tr class="memdesc:ab2e32d6ffe38202f5b6880c62765367c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose a matrix.  <br /></td></tr>
-<tr class="separator:ab2e32d6ffe38202f5b6880c62765367c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae880fcd5d23f8bea4d6b5507cbeef948" id="r_ae880fcd5d23f8bea4d6b5507cbeef948"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae880fcd5d23f8bea4d6b5507cbeef948">SparseMatrix</a> ()</td></tr>
+<tr class="memdesc:ae880fcd5d23f8bea4d6b5507cbeef948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="classOSM_1_1SparseMatrix.html" title="Vector&lt;Map&gt; implementation of sparse matrices.">SparseMatrix</a> object.  <br /></td></tr>
+<tr class="separator:ae880fcd5d23f8bea4d6b5507cbeef948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ebece25ff4cc3d176e3e798454bde5" id="r_a06ebece25ff4cc3d176e3e798454bde5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06ebece25ff4cc3d176e3e798454bde5">SparseMatrix</a> (const int _rowCount, const int _columnCount)</td></tr>
+<tr class="memdesc:a06ebece25ff4cc3d176e3e798454bde5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="classOSM_1_1SparseMatrix.html" title="Vector&lt;Map&gt; implementation of sparse matrices.">SparseMatrix</a> object.  <br /></td></tr>
+<tr class="separator:a06ebece25ff4cc3d176e3e798454bde5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7744cf541753888ee5291f69c94a05f3" id="r_a7744cf541753888ee5291f69c94a05f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7744cf541753888ee5291f69c94a05f3">SparseMatrix</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;_otherToCopy)</td></tr>
+<tr class="memdesc:a7744cf541753888ee5291f69c94a05f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="classOSM_1_1Chain.html" title="Allow to create row/column sparse vectors.">Chain</a> for <a class="el" href="classOSM_1_1SparseMatrix.html" title="Vector&lt;Map&gt; implementation of sparse matrices.">SparseMatrix</a> object.  <br /></td></tr>
+<tr class="separator:a7744cf541753888ee5291f69c94a05f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35556fca2838b37ba850ed01a676361" id="r_af35556fca2838b37ba850ed01a676361"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af35556fca2838b37ba850ed01a676361">operator=</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;_otherToCopy)</td></tr>
+<tr class="memdesc:af35556fca2838b37ba850ed01a676361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign to other matrix.  <br /></td></tr>
+<tr class="separator:af35556fca2838b37ba850ed01a676361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8465379d15a107f733328c4b0ad03b33" id="r_a8465379d15a107f733328c4b0ad03b33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8465379d15a107f733328c4b0ad03b33">operator+=</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;_other)</td></tr>
+<tr class="memdesc:a8465379d15a107f733328c4b0ad03b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a matrix and assign.  <br /></td></tr>
+<tr class="separator:a8465379d15a107f733328c4b0ad03b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb44ef6e0e0f4c1f22a736e20369852" id="r_a9bb44ef6e0e0f4c1f22a736e20369852"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bb44ef6e0e0f4c1f22a736e20369852">operator-=</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;_other)</td></tr>
+<tr class="memdesc:a9bb44ef6e0e0f4c1f22a736e20369852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substract a matrix and assign.  <br /></td></tr>
+<tr class="separator:a9bb44ef6e0e0f4c1f22a736e20369852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf96ca119c78b45f15b97a231919bfd" id="r_abaf96ca119c78b45f15b97a231919bfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaf96ca119c78b45f15b97a231919bfd">operator*=</a> (const int _lambda)</td></tr>
+<tr class="memdesc:abaf96ca119c78b45f15b97a231919bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply factor on each coefficients and assign.  <br /></td></tr>
+<tr class="separator:abaf96ca119c78b45f15b97a231919bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc0e44a561e1d83daf33bbd5a28e823" id="r_affc0e44a561e1d83daf33bbd5a28e823"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
+<tr class="memitem:affc0e44a561e1d83daf33bbd5a28e823"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#affc0e44a561e1d83daf33bbd5a28e823">operator*=</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_other)</td></tr>
+<tr class="memdesc:affc0e44a561e1d83daf33bbd5a28e823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply factor on each coefficients and assign.  <br /></td></tr>
+<tr class="separator:affc0e44a561e1d83daf33bbd5a28e823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7cee9121a0a63b5ebee66730a7ac78" id="r_aee7cee9121a0a63b5ebee66730a7ac78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1Chain.html">MatrixChain</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee7cee9121a0a63b5ebee66730a7ac78">operator[]</a> (const int _index) const</td></tr>
+<tr class="memdesc:aee7cee9121a0a63b5ebee66730a7ac78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a chain from the matrix.  <br /></td></tr>
+<tr class="separator:aee7cee9121a0a63b5ebee66730a7ac78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a666c2b24a269f6d198b809a63ce2bb" id="r_a0a666c2b24a269f6d198b809a63ce2bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1Chain.html">MatrixChain</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a666c2b24a269f6d198b809a63ce2bb">operator[]</a> (const int _index)</td></tr>
+<tr class="memdesc:a0a666c2b24a269f6d198b809a63ce2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a chain from the matrix.  <br /></td></tr>
+<tr class="separator:a0a666c2b24a269f6d198b809a63ce2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96e21f6bfa575c5014304e63dedc5c0" id="r_ae96e21f6bfa575c5014304e63dedc5c0"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
+<tr class="memitem:ae96e21f6bfa575c5014304e63dedc5c0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae96e21f6bfa575c5014304e63dedc5c0">getColumn</a> (const int _index) const</td></tr>
+<tr class="memdesc:ae96e21f6bfa575c5014304e63dedc5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a column from the matrix, even if matrix is a row-chain matrix.  <br /></td></tr>
+<tr class="separator:ae96e21f6bfa575c5014304e63dedc5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd8c3a1062e0b583434c96f9397b285" id="r_a7cd8c3a1062e0b583434c96f9397b285"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
+<tr class="memitem:a7cd8c3a1062e0b583434c96f9397b285"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7cd8c3a1062e0b583434c96f9397b285">getRow</a> (const int _index) const</td></tr>
+<tr class="memdesc:a7cd8c3a1062e0b583434c96f9397b285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a row from the matrix, even if matrix is a row-chain matrix.  <br /></td></tr>
+<tr class="separator:a7cd8c3a1062e0b583434c96f9397b285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e3aa8ed5d99fbaeebd819e9b9e542c" id="r_ae6e3aa8ed5d99fbaeebd819e9b9e542c"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
+<tr class="memitem:ae6e3aa8ed5d99fbaeebd819e9b9e542c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae6e3aa8ed5d99fbaeebd819e9b9e542c">setColumn</a> (const int _index, const <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt; &amp;_chain)</td></tr>
+<tr class="memdesc:ae6e3aa8ed5d99fbaeebd819e9b9e542c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a column from the matrix, even if matrix is a row-chain matrix.  <br /></td></tr>
+<tr class="separator:ae6e3aa8ed5d99fbaeebd819e9b9e542c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b1bbb359689c67ebab8821e8fadfe9" id="r_ad2b1bbb359689c67ebab8821e8fadfe9"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
+<tr class="memitem:ad2b1bbb359689c67ebab8821e8fadfe9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad2b1bbb359689c67ebab8821e8fadfe9">setRow</a> (const int _index, const <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt; &amp;_chain)</td></tr>
+<tr class="memdesc:ad2b1bbb359689c67ebab8821e8fadfe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a row from the matrix, even if matrix is a row-chain matrix.  <br /></td></tr>
+<tr class="separator:ad2b1bbb359689c67ebab8821e8fadfe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9921ff937c625859e7f72c321fa8c0d" id="r_ad9921ff937c625859e7f72c321fa8c0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9921ff937c625859e7f72c321fa8c0d">operator/=</a> (const std::vector&lt; int &gt; &amp;_indexes)</td></tr>
+<tr class="memdesc:ad9921ff937c625859e7f72c321fa8c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a submatrix from the matrix and assign.  <br /></td></tr>
+<tr class="separator:ad9921ff937c625859e7f72c321fa8c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92cdc963c7c2793eb718d9eb93bb9186" id="r_a92cdc963c7c2793eb718d9eb93bb9186"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92cdc963c7c2793eb718d9eb93bb9186">operator/=</a> (const int *_indexes)</td></tr>
+<tr class="memdesc:a92cdc963c7c2793eb718d9eb93bb9186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a submatrix from the matrix and assign.  <br /></td></tr>
+<tr class="separator:a92cdc963c7c2793eb718d9eb93bb9186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ac3bbcbeba81c72d581b3470642cbd" id="r_a02ac3bbcbeba81c72d581b3470642cbd"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02ac3bbcbeba81c72d581b3470642cbd">begin</a> () noexcept</td></tr>
+<tr class="memdesc:a02ac3bbcbeba81c72d581b3470642cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator to the beginning of the chains.  <br /></td></tr>
+<tr class="separator:a02ac3bbcbeba81c72d581b3470642cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1797c256eb1c67edc0bc9d2048189ced" id="r_a1797c256eb1c67edc0bc9d2048189ced"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1797c256eb1c67edc0bc9d2048189ced">begin</a> () const noexcept</td></tr>
+<tr class="memdesc:a1797c256eb1c67edc0bc9d2048189ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator to the beginning of the chains.  <br /></td></tr>
+<tr class="separator:a1797c256eb1c67edc0bc9d2048189ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069d5407cea36b6862cdd6a571667787" id="r_a069d5407cea36b6862cdd6a571667787"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a069d5407cea36b6862cdd6a571667787">cbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:a069d5407cea36b6862cdd6a571667787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator to the beginning of the chains.  <br /></td></tr>
+<tr class="separator:a069d5407cea36b6862cdd6a571667787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3581ebc877ff4aee8ed4e817f8633ab4" id="r_a3581ebc877ff4aee8ed4e817f8633ab4"><td class="memItemLeft" align="right" valign="top">reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3581ebc877ff4aee8ed4e817f8633ab4">rbegin</a> () noexcept</td></tr>
+<tr class="memdesc:a3581ebc877ff4aee8ed4e817f8633ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse iterator to the beginning of the chains.  <br /></td></tr>
+<tr class="separator:a3581ebc877ff4aee8ed4e817f8633ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb789c82f7ff28de4bff072fedd811f7" id="r_abb789c82f7ff28de4bff072fedd811f7"><td class="memItemLeft" align="right" valign="top">const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb789c82f7ff28de4bff072fedd811f7">rbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:abb789c82f7ff28de4bff072fedd811f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator to the beginning of the chains.  <br /></td></tr>
+<tr class="separator:abb789c82f7ff28de4bff072fedd811f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a094b5fe360a80f7f41348c37626bf25f" id="r_a094b5fe360a80f7f41348c37626bf25f"><td class="memItemLeft" align="right" valign="top">const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a094b5fe360a80f7f41348c37626bf25f">crbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:a094b5fe360a80f7f41348c37626bf25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator to the beginning of the chains.  <br /></td></tr>
+<tr class="separator:a094b5fe360a80f7f41348c37626bf25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a6bea46f619738bdf016c41455c749" id="r_ac4a6bea46f619738bdf016c41455c749"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4a6bea46f619738bdf016c41455c749">end</a> () noexcept</td></tr>
+<tr class="memdesc:ac4a6bea46f619738bdf016c41455c749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator to the endning of the chains.  <br /></td></tr>
+<tr class="separator:ac4a6bea46f619738bdf016c41455c749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a2e39b0b63387c4083bf694c29ce88" id="r_a01a2e39b0b63387c4083bf694c29ce88"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a2e39b0b63387c4083bf694c29ce88">end</a> () const noexcept</td></tr>
+<tr class="memdesc:a01a2e39b0b63387c4083bf694c29ce88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator to the endning of the chains.  <br /></td></tr>
+<tr class="separator:a01a2e39b0b63387c4083bf694c29ce88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4e4a445943b5afcf33f0354e90c47f" id="r_a0e4e4a445943b5afcf33f0354e90c47f"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e4e4a445943b5afcf33f0354e90c47f">cend</a> () const noexcept</td></tr>
+<tr class="memdesc:a0e4e4a445943b5afcf33f0354e90c47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator to the endning of the chains.  <br /></td></tr>
+<tr class="separator:a0e4e4a445943b5afcf33f0354e90c47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ec78645952fd455be1553e450b99d4" id="r_a76ec78645952fd455be1553e450b99d4"><td class="memItemLeft" align="right" valign="top">reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ec78645952fd455be1553e450b99d4">rend</a> () noexcept</td></tr>
+<tr class="memdesc:a76ec78645952fd455be1553e450b99d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse iterator to the endning of the chains.  <br /></td></tr>
+<tr class="separator:a76ec78645952fd455be1553e450b99d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee6815746bca99d7ec1e0a3046fc0e5a" id="r_aee6815746bca99d7ec1e0a3046fc0e5a"><td class="memItemLeft" align="right" valign="top">const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee6815746bca99d7ec1e0a3046fc0e5a">rend</a> () const noexcept</td></tr>
+<tr class="memdesc:aee6815746bca99d7ec1e0a3046fc0e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator to the endning of the chains.  <br /></td></tr>
+<tr class="separator:aee6815746bca99d7ec1e0a3046fc0e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc21da925925c1b4e68c2e654ab3dcd2" id="r_abc21da925925c1b4e68c2e654ab3dcd2"><td class="memItemLeft" align="right" valign="top">const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc21da925925c1b4e68c2e654ab3dcd2">crend</a> () const noexcept</td></tr>
+<tr class="memdesc:abc21da925925c1b4e68c2e654ab3dcd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator to the endning of the chains.  <br /></td></tr>
+<tr class="separator:abc21da925925c1b4e68c2e654ab3dcd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af043eb2f3d14ff7518fd2eba860f9c64" id="r_af043eb2f3d14ff7518fd2eba860f9c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af043eb2f3d14ff7518fd2eba860f9c64">transpose</a> ()</td></tr>
+<tr class="memdesc:af043eb2f3d14ff7518fd2eba860f9c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose a matrix.  <br /></td></tr>
+<tr class="separator:af043eb2f3d14ff7518fd2eba860f9c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ab5dcb515f022b5d8dd095ffc94f199f0" id="r_ab5dcb515f022b5d8dd095ffc94f199f0"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
-<tr class="memitem:ab5dcb515f022b5d8dd095ffc94f199f0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab5dcb515f022b5d8dd095ffc94f199f0">operator+</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;_first, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;_second)</td></tr>
-<tr class="memdesc:ab5dcb515f022b5d8dd095ffc94f199f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two matrices together.  <br /></td></tr>
-<tr class="separator:ab5dcb515f022b5d8dd095ffc94f199f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab23a01348e9fc7717e0e14c6a63f1d42" id="r_ab23a01348e9fc7717e0e14c6a63f1d42"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
-<tr class="memitem:ab23a01348e9fc7717e0e14c6a63f1d42"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab23a01348e9fc7717e0e14c6a63f1d42">operator-</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;_first, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;_second)</td></tr>
-<tr class="memdesc:ab23a01348e9fc7717e0e14c6a63f1d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substracts two matrices together.  <br /></td></tr>
-<tr class="separator:ab23a01348e9fc7717e0e14c6a63f1d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada9970fac3409b0e5c5f6c462bc0490f" id="r_ada9970fac3409b0e5c5f6c462bc0490f"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
-<tr class="memitem:ada9970fac3409b0e5c5f6c462bc0490f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ada9970fac3409b0e5c5f6c462bc0490f">operator*</a> (const int _lambda, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;_matrix)</td></tr>
-<tr class="memdesc:ada9970fac3409b0e5c5f6c462bc0490f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply factor on each coefficients.  <br /></td></tr>
-<tr class="separator:ada9970fac3409b0e5c5f6c462bc0490f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbc09ebdf1c9379e9d1b79bc5f119813" id="r_adbc09ebdf1c9379e9d1b79bc5f119813"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
-<tr class="memitem:adbc09ebdf1c9379e9d1b79bc5f119813"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adbc09ebdf1c9379e9d1b79bc5f119813">operator*</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;_matrix, const int _lambda)</td></tr>
-<tr class="memdesc:adbc09ebdf1c9379e9d1b79bc5f119813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply factor on each coefficients.  <br /></td></tr>
-<tr class="separator:adbc09ebdf1c9379e9d1b79bc5f119813"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a424cb3e7268c56ce5f65e11871e33110" id="r_a424cb3e7268c56ce5f65e11871e33110"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
-<tr class="memitem:a424cb3e7268c56ce5f65e11871e33110"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="OSM_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a424cb3e7268c56ce5f65e11871e33110">operator*</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;_first, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;_second)</td></tr>
-<tr class="memdesc:a424cb3e7268c56ce5f65e11871e33110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix multiplication between two chains.  <br /></td></tr>
-<tr class="separator:a424cb3e7268c56ce5f65e11871e33110"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab19d7b0066e3f3642f31a89d04bffa38" id="r_ab19d7b0066e3f3642f31a89d04bffa38"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
-<tr class="memitem:ab19d7b0066e3f3642f31a89d04bffa38"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="OSM_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab19d7b0066e3f3642f31a89d04bffa38">operator%</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;_first, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;_second)</td></tr>
-<tr class="memdesc:ab19d7b0066e3f3642f31a89d04bffa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix multiplication between two chains.  <br /></td></tr>
-<tr class="separator:ab19d7b0066e3f3642f31a89d04bffa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a7334eb60eeebe82662d04d38986e1" id="r_a99a7334eb60eeebe82662d04d38986e1"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
+<tr class="memitem:a99a7334eb60eeebe82662d04d38986e1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a99a7334eb60eeebe82662d04d38986e1">operator+</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_first, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_second)</td></tr>
+<tr class="memdesc:a99a7334eb60eeebe82662d04d38986e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two matrices together.  <br /></td></tr>
+<tr class="separator:a99a7334eb60eeebe82662d04d38986e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dd1f991c56a92e5f98aff7ff0725ac1" id="r_a1dd1f991c56a92e5f98aff7ff0725ac1"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
+<tr class="memitem:a1dd1f991c56a92e5f98aff7ff0725ac1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1dd1f991c56a92e5f98aff7ff0725ac1">operator-</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_first, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_second)</td></tr>
+<tr class="memdesc:a1dd1f991c56a92e5f98aff7ff0725ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substracts two matrices together.  <br /></td></tr>
+<tr class="separator:a1dd1f991c56a92e5f98aff7ff0725ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d65ff2f4cf78f6dfb7f72f0dea2073" id="r_a34d65ff2f4cf78f6dfb7f72f0dea2073"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
+<tr class="memitem:a34d65ff2f4cf78f6dfb7f72f0dea2073"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a34d65ff2f4cf78f6dfb7f72f0dea2073">operator*</a> (const int _lambda, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_matrix)</td></tr>
+<tr class="memdesc:a34d65ff2f4cf78f6dfb7f72f0dea2073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply factor on each coefficients.  <br /></td></tr>
+<tr class="separator:a34d65ff2f4cf78f6dfb7f72f0dea2073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80f2ee95f9933f99f9f464d51309d79" id="r_ac80f2ee95f9933f99f9f464d51309d79"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
+<tr class="memitem:ac80f2ee95f9933f99f9f464d51309d79"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac80f2ee95f9933f99f9f464d51309d79">operator*</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_matrix, const int _lambda)</td></tr>
+<tr class="memdesc:ac80f2ee95f9933f99f9f464d51309d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply factor on each coefficients.  <br /></td></tr>
+<tr class="separator:ac80f2ee95f9933f99f9f464d51309d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a02e6040176b2eb1690833ab2fff98" id="r_a38a02e6040176b2eb1690833ab2fff98"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
+<tr class="memitem:a38a02e6040176b2eb1690833ab2fff98"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a38a02e6040176b2eb1690833ab2fff98">operator*</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_first, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_second)</td></tr>
+<tr class="memdesc:a38a02e6040176b2eb1690833ab2fff98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix multiplication between two chains.  <br /></td></tr>
+<tr class="separator:a38a02e6040176b2eb1690833ab2fff98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafbb82bdafd4761d2a847aab9a9a5800" id="r_aafbb82bdafd4761d2a847aab9a9a5800"><td class="memTemplParams" colspan="2">template&lt;typename _CT , int _CTF&gt; </td></tr>
+<tr class="memitem:aafbb82bdafd4761d2a847aab9a9a5800"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, <a class="el" href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aafbb82bdafd4761d2a847aab9a9a5800">operator%</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_first, const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;_second)</td></tr>
+<tr class="memdesc:aafbb82bdafd4761d2a847aab9a9a5800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix multiplication between two chains.  <br /></td></tr>
+<tr class="separator:aafbb82bdafd4761d2a847aab9a9a5800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a632e404452da59a17710b855de4a1943" id="r_a632e404452da59a17710b855de4a1943"><td class="memTemplParams" colspan="2">template&lt;typename _CT &gt; </td></tr>
 <tr class="memitem:a632e404452da59a17710b855de4a1943"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a632e404452da59a17710b855de4a1943">operator/</a> (const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;_matrix, const std::vector&lt; int &gt; &amp;_indexes)</td></tr>
 <tr class="memdesc:a632e404452da59a17710b855de4a1943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a submatrix from the matrix.  <br /></td></tr>
@@ -218,12 +239,13 @@ Friends</h2></td></tr>
 <tr class="separator:a9363348860ce660dc89978c61aed7888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename _ChainType = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt;<br />
-class OSM::SparseMatrix&lt; _ChainType &gt;</div><p>Vector&lt;Map&gt; implementation of sparse matrices. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename _CoefficientType, int _ChainTypeFlag&gt;<br />
+class OSM::SparseMatrix&lt; _CoefficientType, _ChainTypeFlag &gt;</div><p>Vector&lt;Map&gt; implementation of sparse matrices. </p>
 <p>The <a class="el" href="classOSM_1_1SparseMatrix.html" title="Vector&lt;Map&gt; implementation of sparse matrices.">SparseMatrix</a> class contains all algebraic functions that are related to matrix.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">_ChainType</td><td>The matrix chains types (default is default <a class="el" href="classOSM_1_1Chain.html" title="Allow to create row/column sparse vectors.">OSM::Chain</a>)</td></tr>
+    <tr><td class="paramname">_CoefficientType</td><td>The chain's coefficient types (default is <a class="el" href="____base_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06" title="The default type for signed integers.">OSM::ZCoefficient</a>) </td></tr>
+    <tr><td class="paramname">_ChainTypeFlag</td><td>The type of vector the chain is representing (default is <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821" title="Chain type flag for column chain.">OSM::COLUMN</a>)</td></tr>
   </table>
   </dd>
 </dl>
@@ -231,16 +253,16 @@ class OSM::SparseMatrix&lt; _ChainType &gt;</div><p>Vector&lt;Map&gt; implementa
 <dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>08/04/2024 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3c3efe3cfdb370d681853a21e696da66" name="a3c3efe3cfdb370d681853a21e696da66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c3efe3cfdb370d681853a21e696da66">&#9670;&#160;</a></span>SparseMatrix() <span class="overload">[1/3]</span></h2>
+<a id="ae880fcd5d23f8bea4d6b5507cbeef948" name="ae880fcd5d23f8bea4d6b5507cbeef948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae880fcd5d23f8bea4d6b5507cbeef948">&#9670;&#160;</a></span>SparseMatrix() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;<a class="el" href="classSparseMatrix.html">::SparseMatrix</a> </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::SparseMatrix </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -249,10 +271,11 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 </div><div class="memdoc">
 
 <p>Create new <a class="el" href="classOSM_1_1SparseMatrix.html" title="Vector&lt;Map&gt; implementation of sparse matrices.">SparseMatrix</a> object. </p>
-<p>Default constructor, initialize an empty Matrix as Z integers column chains.</p>
+<p>Default constructor, initialize an empty Matrix as Z integers column chains. The default matrox size is 128x128.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">_ChainType</td><td>The matrix chains types (default is default <a class="el" href="classOSM_1_1Chain.html" title="Allow to create row/column sparse vectors.">OSM::Chain</a>)</td></tr>
+    <tr><td class="paramname">_CoefficientType</td><td>The chain's coefficient types (default is <a class="el" href="____base_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06" title="The default type for signed integers.">OSM::ZCoefficient</a>) </td></tr>
+    <tr><td class="paramname">_ChainTypeFlag</td><td>The type of vector the chain is representing (default is <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821" title="Chain type flag for column chain.">OSM::COLUMN</a>)</td></tr>
   </table>
   </dd>
 </dl>
@@ -263,19 +286,23 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ae7005a7830cf93de703a9dcea5fdb895" name="ae7005a7830cf93de703a9dcea5fdb895"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7005a7830cf93de703a9dcea5fdb895">&#9670;&#160;</a></span>SparseMatrix() <span class="overload">[2/3]</span></h2>
+<a id="a06ebece25ff4cc3d176e3e798454bde5" name="a06ebece25ff4cc3d176e3e798454bde5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ebece25ff4cc3d176e3e798454bde5">&#9670;&#160;</a></span>SparseMatrix() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;<a class="el" href="classSparseMatrix.html">::SparseMatrix</a> </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::SparseMatrix </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_chainCount</em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_rowCount</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_columnCount</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -284,13 +311,15 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 <p>Constructor with size, initialize an empty Matrix as Z integers column chains.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">_ChainType</td><td>The matrix chains types (default is default <a class="el" href="classOSM_1_1Chain.html" title="Allow to create row/column sparse vectors.">OSM::Chain</a>) </td></tr>
+    <tr><td class="paramname">_CoefficientType</td><td>The chain's coefficient types (default is <a class="el" href="____base_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06" title="The default type for signed integers.">OSM::ZCoefficient</a>) </td></tr>
+    <tr><td class="paramname">_ChainTypeFlag</td><td>The type of vector the chain is representing (default is <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821" title="Chain type flag for column chain.">OSM::COLUMN</a>) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">_chainCount</td><td>The number of chains to preallocate.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_rowCount</td><td>The number of rows to preallocate. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_columnCount</td><td>The number of columns to preallocate.</td></tr>
   </table>
   </dd>
 </dl>
@@ -301,18 +330,18 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a5b21fb6c6330ea680fb18c819aa7aff0" name="a5b21fb6c6330ea680fb18c819aa7aff0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b21fb6c6330ea680fb18c819aa7aff0">&#9670;&#160;</a></span>SparseMatrix() <span class="overload">[3/3]</span></h2>
+<a id="a7744cf541753888ee5291f69c94a05f3" name="a7744cf541753888ee5291f69c94a05f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7744cf541753888ee5291f69c94a05f3">&#9670;&#160;</a></span>SparseMatrix() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;<a class="el" href="classSparseMatrix.html">::SparseMatrix</a> </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::SparseMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _ChainType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_otherToCopy</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_otherToCopy</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -324,7 +353,8 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 <dl class="section warning"><dt>Warning</dt><dd>Will raise an error if the other matrix is not the same chain type.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">_ChainType</td><td>The matrix chains types (default is default <a class="el" href="classOSM_1_1Chain.html" title="Allow to create row/column sparse vectors.">OSM::Chain</a>) </td></tr>
+    <tr><td class="paramname">_CoefficientType</td><td>The chain's coefficient types (default is <a class="el" href="____base_8hpp.html#abb36b9d000fcde24bce19f9b064b4b06" title="The default type for signed integers.">OSM::ZCoefficient</a>) </td></tr>
+    <tr><td class="paramname">_ChainTypeFlag</td><td>The type of vector the chain is representing (default is <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821" title="Chain type flag for column chain.">OSM::COLUMN</a>) </td></tr>
   </table>
   </dd>
 </dl>
@@ -342,19 +372,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="add5e9f0fa9d45e1a1fca985262662107" name="add5e9f0fa9d45e1a1fca985262662107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add5e9f0fa9d45e1a1fca985262662107">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
+<a id="a1797c256eb1c67edc0bc9d2048189ced" name="a1797c256eb1c67edc0bc9d2048189ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1797c256eb1c67edc0bc9d2048189ced">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::const_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::begin </td>
+          <td class="memname">const_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -385,19 +415,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ab881ec29f8133ed1060cb763cb40458e" name="ab881ec29f8133ed1060cb763cb40458e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab881ec29f8133ed1060cb763cb40458e">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
+<a id="a02ac3bbcbeba81c72d581b3470642cbd" name="a02ac3bbcbeba81c72d581b3470642cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ac3bbcbeba81c72d581b3470642cbd">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::begin </td>
+          <td class="memname">iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -428,19 +458,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ab05d82c3f2aa7c52a0a55e2a61360bb8" name="ab05d82c3f2aa7c52a0a55e2a61360bb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab05d82c3f2aa7c52a0a55e2a61360bb8">&#9670;&#160;</a></span>cbegin()</h2>
+<a id="a069d5407cea36b6862cdd6a571667787" name="a069d5407cea36b6862cdd6a571667787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069d5407cea36b6862cdd6a571667787">&#9670;&#160;</a></span>cbegin()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::const_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::cbegin </td>
+          <td class="memname">const_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::cbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -471,19 +501,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a372c1e73675e32d31f5af1b90a8799d1" name="a372c1e73675e32d31f5af1b90a8799d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a372c1e73675e32d31f5af1b90a8799d1">&#9670;&#160;</a></span>cend()</h2>
+<a id="a0e4e4a445943b5afcf33f0354e90c47f" name="a0e4e4a445943b5afcf33f0354e90c47f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4e4a445943b5afcf33f0354e90c47f">&#9670;&#160;</a></span>cend()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::const_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::cend </td>
+          <td class="memname">const_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::cend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -514,19 +544,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ad759abc5f62c2eadc59f8f9b032fbded" name="ad759abc5f62c2eadc59f8f9b032fbded"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad759abc5f62c2eadc59f8f9b032fbded">&#9670;&#160;</a></span>crbegin()</h2>
+<a id="a094b5fe360a80f7f41348c37626bf25f" name="a094b5fe360a80f7f41348c37626bf25f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a094b5fe360a80f7f41348c37626bf25f">&#9670;&#160;</a></span>crbegin()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::const_reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::crbegin </td>
+          <td class="memname">const_reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::crbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -557,19 +587,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a9957f96e2733451da94f5bfc973eb944" name="a9957f96e2733451da94f5bfc973eb944"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9957f96e2733451da94f5bfc973eb944">&#9670;&#160;</a></span>crend()</h2>
+<a id="abc21da925925c1b4e68c2e654ab3dcd2" name="abc21da925925c1b4e68c2e654ab3dcd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc21da925925c1b4e68c2e654ab3dcd2">&#9670;&#160;</a></span>crend()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::const_reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::crend </td>
+          <td class="memname">const_reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::crend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -600,19 +630,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a129105e936d571de92a0e35664660d7c" name="a129105e936d571de92a0e35664660d7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a129105e936d571de92a0e35664660d7c">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
+<a id="a01a2e39b0b63387c4083bf694c29ce88" name="a01a2e39b0b63387c4083bf694c29ce88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a2e39b0b63387c4083bf694c29ce88">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::const_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::end </td>
+          <td class="memname">const_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -643,19 +673,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="aac64aae52d39222d62abac37933cde71" name="aac64aae52d39222d62abac37933cde71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac64aae52d39222d62abac37933cde71">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
+<a id="ac4a6bea46f619738bdf016c41455c749" name="ac4a6bea46f619738bdf016c41455c749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a6bea46f619738bdf016c41455c749">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::end </td>
+          <td class="memname">iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -686,18 +716,18 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ad8481b4199730505d11501923df6ee4c" name="ad8481b4199730505d11501923df6ee4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8481b4199730505d11501923df6ee4c">&#9670;&#160;</a></span>getColumn()</h2>
+<a id="ae96e21f6bfa575c5014304e63dedc5c0" name="ae96e21f6bfa575c5014304e63dedc5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae96e21f6bfa575c5014304e63dedc5c0">&#9670;&#160;</a></span>getColumn()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
 template&lt;typename _CT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="OSM_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::getColumn </td>
+          <td class="memname"><a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::getColumn </td>
           <td>(</td>
           <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_index</em></span></td><td>)</td>
           <td> const</td>
@@ -722,18 +752,18 @@ template&lt;typename _CT &gt; </div>
 
 </div>
 </div>
-<a id="a45f9e1a57f88e2e5f7bb120129deae92" name="a45f9e1a57f88e2e5f7bb120129deae92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45f9e1a57f88e2e5f7bb120129deae92">&#9670;&#160;</a></span>getRow()</h2>
+<a id="a7cd8c3a1062e0b583434c96f9397b285" name="a7cd8c3a1062e0b583434c96f9397b285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd8c3a1062e0b583434c96f9397b285">&#9670;&#160;</a></span>getRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
 template&lt;typename _CT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="OSM_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::getRow </td>
+          <td class="memname"><a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::getRow </td>
           <td>(</td>
           <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_index</em></span></td><td>)</td>
           <td> const</td>
@@ -758,16 +788,16 @@ template&lt;typename _CT &gt; </div>
 
 </div>
 </div>
-<a id="ac93e106fa9c6ccb003831fdd6397e60d" name="ac93e106fa9c6ccb003831fdd6397e60d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac93e106fa9c6ccb003831fdd6397e60d">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
+<a id="abaf96ca119c78b45f15b97a231919bfd" name="abaf96ca119c78b45f15b97a231919bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf96ca119c78b45f15b97a231919bfd">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator*= </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator*= </td>
           <td>(</td>
           <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_lambda</em></span></td><td>)</td>
           <td></td>
@@ -791,20 +821,20 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a6ce9312e096ef53bcaeafaaa1da5c065" name="a6ce9312e096ef53bcaeafaaa1da5c065"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ce9312e096ef53bcaeafaaa1da5c065">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
+<a id="affc0e44a561e1d83daf33bbd5a28e823" name="affc0e44a561e1d83daf33bbd5a28e823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc0e44a561e1d83daf33bbd5a28e823">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
 template&lt;typename _CT , int _CTF&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator*= </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator*= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -826,18 +856,18 @@ template&lt;typename _CT , int _CTF&gt; </div>
 
 </div>
 </div>
-<a id="ae78dd21af6583bc959aaed2a6705c5e2" name="ae78dd21af6583bc959aaed2a6705c5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae78dd21af6583bc959aaed2a6705c5e2">&#9670;&#160;</a></span>operator+=()</h2>
+<a id="a8465379d15a107f733328c4b0ad03b33" name="a8465379d15a107f733328c4b0ad03b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8465379d15a107f733328c4b0ad03b33">&#9670;&#160;</a></span>operator+=()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator+= </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator+= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _ChainType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -861,18 +891,18 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ad61b02dc0dcca8d71a613d19304e11cf" name="ad61b02dc0dcca8d71a613d19304e11cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad61b02dc0dcca8d71a613d19304e11cf">&#9670;&#160;</a></span>operator-=()</h2>
+<a id="a9bb44ef6e0e0f4c1f22a736e20369852" name="a9bb44ef6e0e0f4c1f22a736e20369852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bb44ef6e0e0f4c1f22a736e20369852">&#9670;&#160;</a></span>operator-=()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator-= </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator-= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _ChainType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -896,16 +926,16 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="acffec2e2785c7189b760aad30cce2994" name="acffec2e2785c7189b760aad30cce2994"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acffec2e2785c7189b760aad30cce2994">&#9670;&#160;</a></span>operator/=() <span class="overload">[1/2]</span></h2>
+<a id="a92cdc963c7c2793eb718d9eb93bb9186" name="a92cdc963c7c2793eb718d9eb93bb9186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92cdc963c7c2793eb718d9eb93bb9186">&#9670;&#160;</a></span>operator/=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator/= </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator/= </td>
           <td>(</td>
           <td class="paramtype">const int *</td>          <td class="paramname"><span class="paramname"><em>_indexes</em></span></td><td>)</td>
           <td></td>
@@ -932,16 +962,16 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a56fa8db33258831c4a0c3a5af3d3c2e7" name="a56fa8db33258831c4a0c3a5af3d3c2e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56fa8db33258831c4a0c3a5af3d3c2e7">&#9670;&#160;</a></span>operator/=() <span class="overload">[2/2]</span></h2>
+<a id="ad9921ff937c625859e7f72c321fa8c0d" name="ad9921ff937c625859e7f72c321fa8c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9921ff937c625859e7f72c321fa8c0d">&#9670;&#160;</a></span>operator/=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator/= </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator/= </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_indexes</em></span></td><td>)</td>
           <td></td>
@@ -968,18 +998,18 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="abc2de40e06f2ee4d296e3c92df9d051f" name="abc2de40e06f2ee4d296e3c92df9d051f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc2de40e06f2ee4d296e3c92df9d051f">&#9670;&#160;</a></span>operator=()</h2>
+<a id="af35556fca2838b37ba850ed01a676361" name="af35556fca2838b37ba850ed01a676361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35556fca2838b37ba850ed01a676361">&#9670;&#160;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator= </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _ChainType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_otherToCopy</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_otherToCopy</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1003,16 +1033,16 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ade88c278ffeea4b30b22c52fe5ec6edc" name="ade88c278ffeea4b30b22c52fe5ec6edc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade88c278ffeea4b30b22c52fe5ec6edc">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+<a id="a0a666c2b24a269f6d198b809a63ce2bb" name="a0a666c2b24a269f6d198b809a63ce2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a666c2b24a269f6d198b809a63ce2bb">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">_ChainType &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="classOSM_1_1Chain.html">MatrixChain</a> &amp; <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_index</em></span></td><td>)</td>
           <td></td>
@@ -1036,16 +1066,16 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a1b6a4ef4c60b8787f4ce652277c88752" name="a1b6a4ef4c60b8787f4ce652277c88752"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b6a4ef4c60b8787f4ce652277c88752">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+<a id="aee7cee9121a0a63b5ebee66730a7ac78" name="aee7cee9121a0a63b5ebee66730a7ac78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7cee9121a0a63b5ebee66730a7ac78">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">_ChainType <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="classOSM_1_1Chain.html">MatrixChain</a> <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_index</em></span></td><td>)</td>
           <td> const</td>
@@ -1069,19 +1099,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="af15daef852a86bba310b16ab68433f4c" name="af15daef852a86bba310b16ab68433f4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af15daef852a86bba310b16ab68433f4c">&#9670;&#160;</a></span>rbegin() <span class="overload">[1/2]</span></h2>
+<a id="abb789c82f7ff28de4bff072fedd811f7" name="abb789c82f7ff28de4bff072fedd811f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb789c82f7ff28de4bff072fedd811f7">&#9670;&#160;</a></span>rbegin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::const_reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::rbegin </td>
+          <td class="memname">const_reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::rbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -1112,19 +1142,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a0786e3483a4c2092a66691e89dfd33d9" name="a0786e3483a4c2092a66691e89dfd33d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0786e3483a4c2092a66691e89dfd33d9">&#9670;&#160;</a></span>rbegin() <span class="overload">[2/2]</span></h2>
+<a id="a3581ebc877ff4aee8ed4e817f8633ab4" name="a3581ebc877ff4aee8ed4e817f8633ab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3581ebc877ff4aee8ed4e817f8633ab4">&#9670;&#160;</a></span>rbegin() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::rbegin </td>
+          <td class="memname">reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::rbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -1155,19 +1185,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ac8354b28943be95e992e80c0f89c4342" name="ac8354b28943be95e992e80c0f89c4342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8354b28943be95e992e80c0f89c4342">&#9670;&#160;</a></span>rend() <span class="overload">[1/2]</span></h2>
+<a id="aee6815746bca99d7ec1e0a3046fc0e5a" name="aee6815746bca99d7ec1e0a3046fc0e5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee6815746bca99d7ec1e0a3046fc0e5a">&#9670;&#160;</a></span>rend() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::const_reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::rend </td>
+          <td class="memname">const_reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::rend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -1198,19 +1228,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="adaeafacd3b3b59f9431d0e22117cb9ba" name="adaeafacd3b3b59f9431d0e22117cb9ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaeafacd3b3b59f9431d0e22117cb9ba">&#9670;&#160;</a></span>rend() <span class="overload">[2/2]</span></h2>
+<a id="a76ec78645952fd455be1553e450b99d4" name="a76ec78645952fd455be1553e450b99d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ec78645952fd455be1553e450b99d4">&#9670;&#160;</a></span>rend() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; _ChainType &gt;::reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::rend </td>
+          <td class="memname">reverse_iterator <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::rend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -1241,19 +1271,25 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ad9c0907aaae076d367537d7fb82bc58c" name="ad9c0907aaae076d367537d7fb82bc58c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9c0907aaae076d367537d7fb82bc58c">&#9670;&#160;</a></span>setColumn()</h2>
+<a id="ae6e3aa8ed5d99fbaeebd819e9b9e542c" name="ae6e3aa8ed5d99fbaeebd819e9b9e542c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e3aa8ed5d99fbaeebd819e9b9e542c">&#9670;&#160;</a></span>setColumn()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
+<div class="memtemplate">
+template&lt;typename _CT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::setColumn </td>
+          <td class="memname">void <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::setColumn </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_index</em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_chain</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1262,7 +1298,8 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 <dl class="section warning"><dt>Warning</dt><dd>The matrix will perform boundary check.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">_index</td><td>The coefficient index.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_index</td><td>The coefficient index. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_chain</td><td>The new column.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1273,19 +1310,25 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="a391371531c08c9dc3393b0b096be145a" name="a391371531c08c9dc3393b0b096be145a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a391371531c08c9dc3393b0b096be145a">&#9670;&#160;</a></span>setRow()</h2>
+<a id="ad2b1bbb359689c67ebab8821e8fadfe9" name="ad2b1bbb359689c67ebab8821e8fadfe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b1bbb359689c67ebab8821e8fadfe9">&#9670;&#160;</a></span>setRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
+<div class="memtemplate">
+template&lt;typename _CT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::setRow </td>
+          <td class="memname">void <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::setRow </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_index</em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>_index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_chain</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1294,7 +1337,8 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 <dl class="section warning"><dt>Warning</dt><dd>The matrix will perform boundary check.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">_index</td><td>The coefficient index.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_index</td><td>The coefficient index. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_chain</td><td>The new row.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1305,19 +1349,19 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 
 </div>
 </div>
-<a id="ab2e32d6ffe38202f5b6880c62765367c" name="ab2e32d6ffe38202f5b6880c62765367c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2e32d6ffe38202f5b6880c62765367c">&#9670;&#160;</a></span>transpose()</h2>
+<a id="af043eb2f3d14ff7518fd2eba860f9c64" name="af043eb2f3d14ff7518fd2eba860f9c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af043eb2f3d14ff7518fd2eba860f9c64">&#9670;&#160;</a></span>transpose()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _ChainType &gt;::transpose </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> <a class="el" href="classOSM_1_1SparseMatrix.html">OSM::SparseMatrix</a>&lt; _CoefficientType, _ChainTypeFlag &gt;::transpose </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -1340,13 +1384,13 @@ template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="ab19d7b0066e3f3642f31a89d04bffa38" name="ab19d7b0066e3f3642f31a89d04bffa38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab19d7b0066e3f3642f31a89d04bffa38">&#9670;&#160;</a></span>operator%</h2>
+<a id="aafbb82bdafd4761d2a847aab9a9a5800" name="aafbb82bdafd4761d2a847aab9a9a5800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafbb82bdafd4761d2a847aab9a9a5800">&#9670;&#160;</a></span>operator%</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
 template&lt;typename _CT , int _CTF&gt; </div>
 <table class="mlabels">
@@ -1354,14 +1398,14 @@ template&lt;typename _CT , int _CTF&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="OSM_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt; &gt; operator% </td>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, <a class="el" href="____base_8hpp.html#afa42b39d638eebb5a395d53dd3113427">ROW</a> &gt; operator% </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_first</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_first</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_second</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_second</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1390,15 +1434,15 @@ template&lt;typename _CT , int _CTF&gt; </div>
 
 </div>
 </div>
-<a id="ada9970fac3409b0e5c5f6c462bc0490f" name="ada9970fac3409b0e5c5f6c462bc0490f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada9970fac3409b0e5c5f6c462bc0490f">&#9670;&#160;</a></span>operator* <span class="overload">[1/3]</span></h2>
+<a id="a34d65ff2f4cf78f6dfb7f72f0dea2073" name="a34d65ff2f4cf78f6dfb7f72f0dea2073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d65ff2f4cf78f6dfb7f72f0dea2073">&#9670;&#160;</a></span>operator* <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
-template&lt;typename _CT &gt; </div>
+template&lt;typename _CT , int _CTF&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1411,7 +1455,7 @@ template&lt;typename _CT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_matrix</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_matrix</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1438,15 +1482,65 @@ template&lt;typename _CT &gt; </div>
 
 </div>
 </div>
-<a id="adbc09ebdf1c9379e9d1b79bc5f119813" name="adbc09ebdf1c9379e9d1b79bc5f119813"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbc09ebdf1c9379e9d1b79bc5f119813">&#9670;&#160;</a></span>operator* <span class="overload">[2/3]</span></h2>
+<a id="a38a02e6040176b2eb1690833ab2fff98" name="a38a02e6040176b2eb1690833ab2fff98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a02e6040176b2eb1690833ab2fff98">&#9670;&#160;</a></span>operator* <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
-template&lt;typename _CT &gt; </div>
+template&lt;typename _CT , int _CTF&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, <a class="el" href="____base_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_first</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_second</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform matrix multiplication between two chains. </p>
+<p>Generate a column-based matrix from the matrix multiplication and return it.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>The matrix have the same coefficent type.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Will raise an error if the two chains are not the same coefficient type.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_first</td><td>The first matrix. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_second</td><td>The second matrix.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the matrix multiplication, column-based.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classOSM_1_1Chain.html">OSM::Chain</a></dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Fedyna K. </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>08/04/2024 </dd></dl>
+
+</div>
+</div>
+<a id="ac80f2ee95f9933f99f9f464d51309d79" name="ac80f2ee95f9933f99f9f464d51309d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80f2ee95f9933f99f9f464d51309d79">&#9670;&#160;</a></span>operator* <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
+<div class="memtemplate">
+template&lt;typename _CT , int _CTF&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1454,7 +1548,7 @@ template&lt;typename _CT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> operator* </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_matrix</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_matrix</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1486,13 +1580,13 @@ template&lt;typename _CT &gt; </div>
 
 </div>
 </div>
-<a id="a424cb3e7268c56ce5f65e11871e33110" name="a424cb3e7268c56ce5f65e11871e33110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a424cb3e7268c56ce5f65e11871e33110">&#9670;&#160;</a></span>operator* <span class="overload">[3/3]</span></h2>
+<a id="a99a7334eb60eeebe82662d04d38986e1" name="a99a7334eb60eeebe82662d04d38986e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a7334eb60eeebe82662d04d38986e1">&#9670;&#160;</a></span>operator+</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
 template&lt;typename _CT , int _CTF&gt; </div>
 <table class="mlabels">
@@ -1500,64 +1594,14 @@ template&lt;typename _CT , int _CTF&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, <a class="el" href="OSM_8hpp.html#a634c62842065ac17dcbfdf4af4c37821">COLUMN</a> &gt; &gt; operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_first</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; <a class="el" href="classOSM_1_1Chain.html">Chain</a>&lt; _CT, _CTF &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_second</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Perform matrix multiplication between two chains. </p>
-<p>Generate a column-based matrix from the matrix multiplication and return it.</p>
-<dl class="section pre"><dt>Precondition</dt><dd>The matrix have the same coefficent type.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Will raise an error if the two chains are not the same coefficient type.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">_first</td><td>The first matrix. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">_second</td><td>The second matrix.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The result of the matrix multiplication, column-based.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classOSM_1_1Chain.html">OSM::Chain</a></dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Fedyna K. </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>08/04/2024 </dd></dl>
-
-</div>
-</div>
-<a id="ab5dcb515f022b5d8dd095ffc94f199f0" name="ab5dcb515f022b5d8dd095ffc94f199f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5dcb515f022b5d8dd095ffc94f199f0">&#9670;&#160;</a></span>operator+</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
-<div class="memtemplate">
-template&lt;typename _CT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
           <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> operator+ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_first</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_first</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_second</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_second</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1586,15 +1630,15 @@ template&lt;typename _CT &gt; </div>
 
 </div>
 </div>
-<a id="ab23a01348e9fc7717e0e14c6a63f1d42" name="ab23a01348e9fc7717e0e14c6a63f1d42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab23a01348e9fc7717e0e14c6a63f1d42">&#9670;&#160;</a></span>operator-</h2>
+<a id="a1dd1f991c56a92e5f98aff7ff0725ac1" name="a1dd1f991c56a92e5f98aff7ff0725ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dd1f991c56a92e5f98aff7ff0725ac1">&#9670;&#160;</a></span>operator-</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
-template&lt;typename _CT &gt; </div>
+template&lt;typename _CT , int _CTF&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1602,12 +1646,12 @@ template&lt;typename _CT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a> operator- </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_first</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_first</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_second</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classOSM_1_1SparseMatrix.html">SparseMatrix</a>&lt; _CT, _CTF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>_second</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1642,7 +1686,7 @@ template&lt;typename _CT &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
 template&lt;typename _CT &gt; </div>
 <table class="mlabels">
@@ -1695,7 +1739,7 @@ The submatrix will be rectangular.</dd></dl>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _ChainType  = OSM::Chain&lt;OSM::ZCoefficient, OSM::COLUMN&gt;&gt; </div>
+template&lt;typename _CoefficientType , int _ChainTypeFlag&gt; </div>
 <div class="memtemplate">
 template&lt;typename _CT &gt; </div>
 <table class="mlabels">
@@ -1743,7 +1787,7 @@ The submatrix will be rectangular.</dd></dl>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>OSM/<a class="el" href="OSM_8hpp_source.html">OSM.hpp</a></li>
+<li>OSM/<a class="el" href="____base_8hpp_source.html">__base.hpp</a></li>
 <li>OSM/<a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a></li>
 </ul>
 </div><!-- contents -->

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setcolumn_0',['setColumn',['../class_o_s_m_1_1_sparse_matrix.html#a8841d98d4f0e4644fecacc3294582be6',1,'OSM::SparseMatrix']]],
-  ['setrow_1',['setRow',['../class_o_s_m_1_1_sparse_matrix.html#a78179c336aaefc0b69d334d315903aa9',1,'OSM::SparseMatrix']]],
-  ['sparsematrix_2',['sparsematrix',['../class_o_s_m_1_1_sparse_matrix.html#a3c3efe3cfdb370d681853a21e696da66',1,'OSM::SparseMatrix::SparseMatrix()'],['../class_o_s_m_1_1_sparse_matrix.html#ae7005a7830cf93de703a9dcea5fdb895',1,'OSM::SparseMatrix::SparseMatrix(const int _chainCount)'],['../class_o_s_m_1_1_sparse_matrix.html#a5b21fb6c6330ea680fb18c819aa7aff0',1,'OSM::SparseMatrix::SparseMatrix(const SparseMatrix &amp;_otherToCopy)']]]
+  ['setcolumn_0',['setColumn',['../classOSM_1_1SparseMatrix.html#ae6e3aa8ed5d99fbaeebd819e9b9e542c',1,'OSM::SparseMatrix']]],
+  ['setrow_1',['setRow',['../classOSM_1_1SparseMatrix.html#ad2b1bbb359689c67ebab8821e8fadfe9',1,'OSM::SparseMatrix']]],
+  ['sparsematrix_2',['SparseMatrix',['../classOSM_1_1SparseMatrix.html#ae880fcd5d23f8bea4d6b5507cbeef948',1,'OSM::SparseMatrix::SparseMatrix()'],['../classOSM_1_1SparseMatrix.html#a06ebece25ff4cc3d176e3e798454bde5',1,'OSM::SparseMatrix::SparseMatrix(const int _rowCount, const int _columnCount)'],['../classOSM_1_1SparseMatrix.html#a7744cf541753888ee5291f69c94a05f3',1,'OSM::SparseMatrix::SparseMatrix(const SparseMatrix &amp;_otherToCopy)']]]
 ];
