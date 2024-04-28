@@ -5,8 +5,8 @@
  * \version 0.1.0
  * \date 02/04/2024
  * 
- * Define all classes and types for the Optimised Sparsed Matrix (OSM) library.
- * Should not be included directly.
+ * Include all the Optimised Sparsed Matrix (OSM) library.
+ * Should be included directly.
  */
 
 #ifndef __OPTIMISED_SPARSED_MATRIX__

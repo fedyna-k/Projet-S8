@@ -182,8 +182,6 @@ public:
     /**
      * \brief Apply factor on each coefficients.
      * 
-     * \warning Will raise an error if _lambda is 0.
-     * 
      * \param[in] _lambda The factor to apply.
      * \param[in] _chain The second chain.
      * 
@@ -200,8 +198,6 @@ public:
 
     /**
      * \brief Apply factor on each coefficients.
-     * 
-     * \warning Will raise an error if _lambda is 0.
      * 
      * \param[in] _chain The second chain.
      * \param[in] _lambda The factor to apply.
@@ -330,8 +326,6 @@ public:
 
     /**
      * \brief Apply factor on each coefficients and assign.
-     * 
-     * \warning Will raise an error if _lambda is 0.
      * 
      * \param[in] _lambda The factor to apply.
      * 
